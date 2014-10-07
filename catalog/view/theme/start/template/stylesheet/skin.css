@@ -1,0 +1,114 @@
+/*--------------------------------------------
+Style One
+----------------------------------------------*/
+.style_1 .free-ship {
+  background-color: #EEEEEE;
+}
+.style_1 .kuler-slides,
+.style_1 .kuler-tabs,
+.style_1 #content .kbm-recent-article {
+  border-bottom: 1px solid #eee;
+}
+@media only screen and (min-width: 992px) {
+  .style_1 .navigation {
+    border-top: 1px solid #EEEEEE;
+  }
+}
+.style_1 .product-grid .sale,
+.style_1 .box-product .sale {
+  background-color: #7FDC8C;
+}
+/*--------------------------------------------
+Style Two
+----------------------------------------------*/
+.style_2 .free-ship h3 {
+  color: #ffffff;
+}
+.style_2 .free-ship a {
+  background-color: #fff;
+  color: #444444;
+}
+.style_2 .kuler-slides,
+.style_2 .kuler-tabs {
+  border-bottom: 1px solid #eee;
+}
+@media only screen and (min-width: 1200px) {
+  .style_2 .product-grid .col-xs-12,
+  .style_2 .box-product .col-xs-12 {
+    width: 20%;
+  }
+}
+.style_2 .mainmenu > li {
+  border-top: 3px solid transparent;
+}
+.style_2 .mainmenu > li:hover {
+  border-top: 3px solid rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 1200px) {
+  .style_2 .kbm-recent-article .col-md-3 {
+    width: 50%;
+  }
+}
+.style_2 #content .kbm-recent-article li .image {
+  float: left;
+  margin-right: 15px;
+}
+.style_2 #content .kbm-recent-article li a {
+  color: #0090D8;
+}
+/*--------------------------------------------
+Style Three
+----------------------------------------------*/
+.style_3 .banners,
+.style_3 #container {
+  background-color: #222222;
+}
+.style_3 .mainmenu > li > div,
+.style_3 #header #cart .content,
+.style_3 #header #search .kuler-finder-result,
+.style_3 .navigation {
+  background-color: #333333;
+}
+.style_3 .free-ship,
+.style_3 .breadcrumb,
+.style_3 .product-list > div:hover,
+.style_3 .product-filter {
+  background-color: #292929;
+}
+.style_3 .labels-brands,
+.style_3 .start,
+.style_3 #header #search .kuler-finder-result #load-more-container {
+  border-color: #333;
+}
+.style_3 #footer {
+  border-top: 1px solid #333333;
+}
+.style_3 .kuler-tabs .box-heading li.ui-state-active a,
+.style_3 .kuler-slides .box-heading,
+.style_3 .mainmenu > li a {
+  color: #ffffff;
+}
+.style_3 #header #search .kuler-finder-result .list-layout .name a {
+  color: #ffffff;
+}
+.style_3 #header #search input {
+  border-color: #494949;
+}
+.style_3 ul.box-category > li + li,
+.style_3 .category-info p {
+  border-color: #494949;
+}
+.style_3 .pagination .links a,
+.style_3 .pagination .links b {
+  background-color: #494949;
+}
+.style_3 ::-moz-placeholder {
+  color: #ffffff;
+}
+.style_3 :-ms-input-placeholder {
+  color: #ffffff;
+}
+.style_3 ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+/*# sourceMappingURL=../less/sourcemaps/skin.css.map */

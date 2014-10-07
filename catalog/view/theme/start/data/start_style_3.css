@@ -1,0 +1,193 @@
+/* Layout */
+
+/* Home Icon */
+
+/* Custom Notification */
+
+#notification {
+	top: 80px;
+	z-index: 9999;
+	opacity: 0;
+	right: 20px;
+	width: 300px;
+	position: fixed;
+	visibility: hidden;
+	transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+}
+
+#notification.active {
+	top: 20px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/* Scroll up */
+
+.scrollup {
+	z-index: 2;
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+	display: none;
+}
+
+
+/* Style Customization */
+
+  body {
+    
+      font-family: "Varela Round";
+    
+    
+    
+    
+      background-image: url(http://localhost/oc1564/catalog/view/theme/start/data/patterns/wood.png);
+    
+    
+      color: #fff;
+    
+  }
+.kuler-tabs,.kuler-slides{
+  
+    font-family: "Varela Round";
+  
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+  
+    font-family: "Varela Round";
+  
+  
+  
+  
+}
+
+
+
+  #top-bar{
+  
+    background-color: #333;
+  
+  }
+
+
+
+  #top-bar a{
+    
+      color: #949494;
+    
+  }
+
+
+
+  #top-bar a:hover{
+    
+      color: #db2c2c;
+    
+  }
+
+
+
+  #top-bar{
+    
+      color: #949494;
+    
+  }
+
+
+
+  #top-bar{
+    
+      border-color: #545454;
+    
+  }
+
+
+
+  #header{
+  
+    background-color: #333;
+  
+  }
+  .style_2 .free-ship{
+    
+      background-color: #333;
+    
+  }
+  .style_2 .product-grid .sale,
+  .style_2 .product-list .sale{
+    
+      background-color: #333;
+    
+  }
+
+
+
+#footer,#powered,.social-newsletter{
+  
+    background-color: #222;
+  
+}
+
+
+
+  #footer h3,#powered h3{
+    
+      color: #ffffff;
+    
+  }
+
+
+
+  #footer a,#powered a{
+    
+      color: #666;
+    
+  }
+  #footer,#powered{
+    
+      color: #666;
+    
+  }
+
+
+
+  #footer a:hover,#powered a:hover{
+    
+      color: #fff;
+    
+  }
+  #footer .steps li:hover,
+  #footer .contact li:hover{
+    
+      color: #fff;
+    
+  }
+
+  .social a:hover:before,
+  .newsletter button:hover{
+    
+      background-color: #fff;
+    
+  }
+
+
+
+
+.mainmenu > li > a {
+	
+	color: #fff;
+	
+	
+}
+
+
+#header #cart #cart-total:after,
+#header #search .button-search:before{
+  color: #fff;
+}

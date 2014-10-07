@@ -1,0 +1,45 @@
+---------- Date: 2014-09-05 01:43:02 ~ IP : 37.58.100.180 ----------
+REQUEST URI : /start/2/index.php?route=information/information&amp;information_id=6
+MOD DETAILS:
+   modFile   : /home/kladmin/public_html/demo.kulerthemes/start/2/vqmod/xml/vqmod_kuler.xml
+   id        : KulerThemes
+   version   : 
+   vqmver    : 
+   author    : kulerthemes.com
+
+File Name    : catalog/controller/module/kuler_cp.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->overrideResponse();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-05 08:51:31 ~ IP : 89.71.47.196 ----------
+REQUEST URI : /start/2/index.php?route=common/home
+MOD DETAILS:
+   modFile   : /home/kladmin/public_html/demo.kulerthemes/start/2/vqmod/xml/vqmod_kuler.xml
+   id        : KulerThemes
+   version   : 
+   vqmver    : 
+   author    : kulerthemes.com
+
+File Name    : catalog/controller/module/kuler_cp.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->overrideResponse();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-05 08:59:16 ~ IP : 130.0.58.137 ----------
+REQUEST URI : /start/2/index.php?route=common/home
+MOD DETAILS:
+   modFile   : /home/kladmin/public_html/demo.kulerthemes/start/2/vqmod/xml/vqmod_kuler.xml
+   id        : KulerThemes
+   version   : 
+   vqmver    : 
+   author    : kulerthemes.com
+
+File Name    : catalog/controller/module/kuler_cp.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->overrideResponse();
+
+----------------------------------------------------------------------
+
+

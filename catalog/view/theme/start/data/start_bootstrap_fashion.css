@@ -1,0 +1,132 @@
+/* Home Icon */
+
+
+/* Custom Notification */
+
+
+/* Scroll up */
+
+
+/* Style Customization */
+
+  body {
+    
+      font-family: "Varela Round";
+    
+    
+    
+    
+      background-image: url(http://localhost/oc1564/catalog/view/theme/start_bootstrap/data/patterns/pattern12.png);
+    
+    
+      color: #8c8c8c;
+    
+  }
+
+
+
+
+
+  #top-bar{
+  
+    background-color: rgba(255, 255, 255, 1);
+  
+  }
+
+
+
+  #top-bar a{
+    
+      color: #b8b8b8;
+    
+  }
+
+
+
+  #top-bar a:hover{
+    
+      color: #de2f2f;
+    
+  }
+
+
+
+  #top-bar{
+    
+      color: #c7c7c7;
+    
+  }
+
+
+
+  #top-bar{
+    
+      border-color: #d1d1d1;
+    
+  }
+
+
+
+  #header{
+  
+    background-color: rgba(255, 255, 255, 1);
+  
+  }
+
+
+
+#footer,#powered,.social-newsletter{
+  
+    background-color: #222;
+  
+}
+
+
+
+  #footer h3,#powered h3{
+    
+      color: #ffffff;
+    
+  }
+
+
+
+  #footer a,#powered a{
+    
+      color: #bfbfbf;
+    
+  }
+  #footer,#powered{
+    
+      color: #bfbfbf;
+    
+  }
+
+
+
+  #footer a:hover,#powered a:hover{
+    
+      color: #ffffff;
+    
+  }
+  #footer .steps li:hover,
+  #footer .contact li:hover{
+    
+      color: #ffffff;
+    
+  }
+
+  .social a:hover:before,
+  .newsletter button:hover{
+    
+      background-color: #ffffff;
+    
+  }
+
+
+
+
+#menu > ul > li > a {
+	
+	
+}

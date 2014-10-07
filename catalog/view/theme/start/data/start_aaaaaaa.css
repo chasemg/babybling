@@ -1,0 +1,172 @@
+/* Layout */
+
+  @media only screen and (min-width: 100em) {
+      .boxed #container {
+        max-width: calc( + 30px);
+      }
+      .container{
+        max-width:  ;
+      }
+    }
+
+/* Home Icon */
+
+/* Custom Notification */
+
+#notification {
+	top: 80px;
+	z-index: 9999;
+	opacity: 0;
+	right: 20px;
+	width: 300px;
+	position: fixed;
+	visibility: hidden;
+	transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+}
+
+#notification.active {
+	top: 20px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/* Scroll up */
+
+.scrollup {
+	z-index: 2;
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+	display: none;
+}
+
+
+/* Style Customization */
+
+  body {
+    
+      font-family: "Varela Round";
+    
+    
+    
+    
+      background-image: url(http://demo.kulerthemes.com/start/1/catalog/view/theme/start/data/patterns/binding_dark_retina.png);
+    
+    
+      color: #9e9e9e;
+    
+  }
+.kuler-tabs,.kuler-slides{
+  
+    font-family: "Varela Round";
+  
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+  
+    font-family: "Varela Round";
+  
+  
+    font-style: normal;
+  
+  
+    font-weight: normal;
+  
+  
+}
+
+
+
+  #top-bar{
+  
+    background-color: #222;
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+  #header{
+  
+    background-color: #63B5BD;
+  
+  }
+  .style_2 .free-ship{
+    
+      background-color: #63B5BD;
+    
+  }
+  .style_2 .product-grid .sale,
+  .style_2 .product-list .sale,
+  .style_2 .navigation{
+    
+      background-color: #63B5BD;
+    
+  }
+
+
+
+#footer,#powered,.social-newsletter{
+  
+    background-color: #222;
+  
+}
+
+
+
+  #footer h3,#powered h3{
+    
+      color: #fff;
+    
+  }
+
+
+
+
+
+  #footer a:hover,#powered a:hover{
+    
+      color: #ffffff;
+    
+  }
+  #footer .steps li:hover,
+  #footer .contact li:hover{
+    
+      color: #ffffff;
+    
+  }
+
+  .social a:hover:before,
+  .newsletter button:hover{
+    
+      background-color: #ffffff;
+    
+  }
+
+
+
+
+.mainmenu > li > a {
+	
+	color: #ffffff;
+	
+	
+}
+
+
+#header #cart #cart-total:after,
+#header #search .button-search:before{
+  color: #ffffff;
+}

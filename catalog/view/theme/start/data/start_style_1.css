@@ -1,0 +1,209 @@
+/* Layout */
+
+  @media only screen and (min-width: 100em) {
+      .boxed #container {
+        max-width: calc(1170px + 30px);
+      }
+      .container{
+        max-width:  1170px;
+      }
+    }
+
+/* Custom Notification */
+
+#notification {
+	top: 80px;
+	z-index: 9999;
+	opacity: 0;
+	right: 20px;
+	width: 300px;
+	position: fixed;
+	visibility: hidden;
+	transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+}
+
+#notification.active {
+	top: 20px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/* Scroll up */
+
+.scrollup {
+	z-index: 2;
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+	display: none;
+}
+
+
+/* Style Customization */
+
+
+
+  body {
+    
+      font-family: "Varela Round";
+    
+    
+    
+    
+        background-color: #9e9e9e;
+    
+    
+    
+      color: #333;
+    
+  }
+  .kuler-tabs,.kuler-slides,
+  #header .checkout a,
+  .cart-total + .buttons a{
+  
+    font-family: "Varela Round";
+  
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+  
+    font-family: "Varela Round";
+  
+  
+  
+  
+}
+
+
+
+  #top-bar{
+  
+    background-color: #F2F2F2;
+  
+  }
+
+
+
+  #top-bar a{
+    
+      color: #999;
+    
+  }
+
+
+
+  #top-bar a:hover{
+    
+      color: #db2c2c;
+    
+  }
+
+
+
+  #top-bar{
+    
+      color: #999;
+    
+  }
+
+
+
+  #top-bar{
+    
+      border-color: #f2f2f2;
+    
+  }
+
+
+
+
+  #header{
+  
+    background-color: rgba(255, 255, 255, 1);
+  
+  }
+  .style_2 .free-ship{
+    
+      background-color: rgba(255, 255, 255, 1);
+    
+  }
+  .style_2 .product-grid .sale,
+  .style_2 .product-list .sale,
+  .style_2 .navigation{
+    
+      background-color: rgba(255, 255, 255, 1);
+    
+  }
+
+
+
+#footer,#powered,.social-newsletter{
+  
+    background-color: #222;
+  
+}
+
+
+
+  #footer h3,#powered h3{
+    
+      color: #ffffff;
+    
+  }
+
+
+
+  #footer a,#powered a{
+    
+      color: #666;
+    
+  }
+  #footer,#powered{
+    
+      color: #666;
+    
+  }
+
+
+
+  #footer a:hover,#powered a:hover{
+    
+      color: #fff;
+    
+  }
+  #footer .steps li:hover,
+  #footer .contact li:hover{
+    
+      color: #fff;
+    
+  }
+
+  .social a:hover:before,
+  .newsletter button:hover{
+    
+      background-color: #fff;
+    
+  }
+
+
+
+
+.mainmenu > li > a {
+	
+	color: #666;
+	
+	
+}
+
+
+#header #cart #cart-total:after,
+#header #search .button-search:before{
+  color: #666;
+}
+
+
