@@ -81,8 +81,8 @@ if ($modules) {
           ?>
         </div>
         <div class="col-md-5 col-lg-5 links">
-          <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
-          <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
+          <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a> |
+          <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a> |
           <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
 
           <div id="welcome">
