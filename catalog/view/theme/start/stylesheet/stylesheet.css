@@ -1529,7 +1529,7 @@ Top bar
   font-size: 11px;
 }
 #top-bar #welcome {
-  font-size: 0;
+ 
   display: inline;
 }
 #top-bar #welcome a {

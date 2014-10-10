@@ -1,24 +1,25 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://bling.local/admin/');
-define('HTTP_CATALOG', 'http://bling.local/');
+define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/admin/');
+define('HTTP_CATALOG', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://bling.local/admin/');
-define('HTTPS_CATALOG', 'http://bling.local/');
+define('HTTPS_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/admin/');
+define('HTTPS_CATALOG', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // DIR
-define('DIR_APPLICATION', 'D:\projects\bling/admin/');
-define('DIR_SYSTEM', 'D:\projects\bling/system/');
-define('DIR_DATABASE', 'D:\projects\bling/system/database/');
-define('DIR_LANGUAGE', 'D:\projects\bling/admin/language/');
-define('DIR_TEMPLATE', 'D:\projects\bling/admin/view/template/');
-define('DIR_CONFIG', 'D:\projects\bling/system/config/');
-define('DIR_IMAGE', 'D:\projects\bling/image/');
-define('DIR_CACHE', 'D:\projects\bling/system/cache/');
-define('DIR_DOWNLOAD', 'D:\projects\bling/download/');
-define('DIR_LOGS', 'D:\projects\bling/system/logs/');
-define('DIR_CATALOG', 'D:\projects\bling/catalog/');
+define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
+define('DIR_APPLICATION', DOC_ROOT . '/admin/');
+define('DIR_SYSTEM', DOC_ROOT . '/system/');
+define('DIR_DATABASE', DOC_ROOT . '/system/database/');
+define('DIR_LANGUAGE', DOC_ROOT . '/admin/language/');
+define('DIR_TEMPLATE', DOC_ROOT . '/admin/view/template/');
+define('DIR_CONFIG', DOC_ROOT . '/system/config/');
+define('DIR_IMAGE', DOC_ROOT . '/image/');
+define('DIR_CACHE', DOC_ROOT . '/system/cache/');
+define('DIR_DOWNLOAD', DOC_ROOT . '/download/');
+define('DIR_LOGS', DOC_ROOT . '/system/logs/');
+define('DIR_CATALOG', DOC_ROOT . '/catalog/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
