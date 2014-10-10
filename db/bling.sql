@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2014 at 11:17 PM
+-- Generation Time: Oct 08, 2014 at 06:51 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `oc_address`
 --
 
+DROP TABLE IF EXISTS `oc_address`;
 CREATE TABLE IF NOT EXISTS `oc_address` (
   `address_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
@@ -58,6 +59,7 @@ INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, 
 -- Table structure for table `oc_affiliate`
 --
 
+DROP TABLE IF EXISTS `oc_affiliate`;
 CREATE TABLE IF NOT EXISTS `oc_affiliate` (
   `affiliate_id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(32) NOT NULL,
@@ -99,6 +101,7 @@ CREATE TABLE IF NOT EXISTS `oc_affiliate` (
 -- Table structure for table `oc_affiliate_transaction`
 --
 
+DROP TABLE IF EXISTS `oc_affiliate_transaction`;
 CREATE TABLE IF NOT EXISTS `oc_affiliate_transaction` (
   `affiliate_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `affiliate_id` int(11) NOT NULL,
@@ -115,6 +118,7 @@ CREATE TABLE IF NOT EXISTS `oc_affiliate_transaction` (
 -- Table structure for table `oc_attribute`
 --
 
+DROP TABLE IF EXISTS `oc_attribute`;
 CREATE TABLE IF NOT EXISTS `oc_attribute` (
   `attribute_id` int(11) NOT NULL AUTO_INCREMENT,
   `attribute_group_id` int(11) NOT NULL,
@@ -145,6 +149,7 @@ INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) 
 -- Table structure for table `oc_attribute_description`
 --
 
+DROP TABLE IF EXISTS `oc_attribute_description`;
 CREATE TABLE IF NOT EXISTS `oc_attribute_description` (
   `attribute_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -186,6 +191,7 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 -- Table structure for table `oc_attribute_group`
 --
 
+DROP TABLE IF EXISTS `oc_attribute_group`;
 CREATE TABLE IF NOT EXISTS `oc_attribute_group` (
   `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) NOT NULL,
@@ -208,6 +214,7 @@ INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
 -- Table structure for table `oc_attribute_group_description`
 --
 
+DROP TABLE IF EXISTS `oc_attribute_group_description`;
 CREATE TABLE IF NOT EXISTS `oc_attribute_group_description` (
   `attribute_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -235,6 +242,7 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 -- Table structure for table `oc_banner`
 --
 
+DROP TABLE IF EXISTS `oc_banner`;
 CREATE TABLE IF NOT EXISTS `oc_banner` (
   `banner_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -258,6 +266,7 @@ INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
 -- Table structure for table `oc_banner_image`
 --
 
+DROP TABLE IF EXISTS `oc_banner_image`;
 CREATE TABLE IF NOT EXISTS `oc_banner_image` (
   `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,
   `banner_id` int(11) NOT NULL,
@@ -293,6 +302,7 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`) 
 -- Table structure for table `oc_banner_image_description`
 --
 
+DROP TABLE IF EXISTS `oc_banner_image_description`;
 CREATE TABLE IF NOT EXISTS `oc_banner_image_description` (
   `banner_image_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -343,6 +353,7 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 -- Table structure for table `oc_category`
 --
 
+DROP TABLE IF EXISTS `oc_category`;
 CREATE TABLE IF NOT EXISTS `oc_category` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) DEFAULT NULL,
@@ -404,6 +415,7 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 -- Table structure for table `oc_category_description`
 --
 
+DROP TABLE IF EXISTS `oc_category_description`;
 CREATE TABLE IF NOT EXISTS `oc_category_description` (
   `category_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -499,6 +511,7 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 -- Table structure for table `oc_category_filter`
 --
 
+DROP TABLE IF EXISTS `oc_category_filter`;
 CREATE TABLE IF NOT EXISTS `oc_category_filter` (
   `category_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL,
@@ -511,6 +524,7 @@ CREATE TABLE IF NOT EXISTS `oc_category_filter` (
 -- Table structure for table `oc_category_path`
 --
 
+DROP TABLE IF EXISTS `oc_category_path`;
 CREATE TABLE IF NOT EXISTS `oc_category_path` (
   `category_id` int(11) NOT NULL,
   `path_id` int(11) NOT NULL,
@@ -598,6 +612,7 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 -- Table structure for table `oc_category_to_layout`
 --
 
+DROP TABLE IF EXISTS `oc_category_to_layout`;
 CREATE TABLE IF NOT EXISTS `oc_category_to_layout` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -611,6 +626,7 @@ CREATE TABLE IF NOT EXISTS `oc_category_to_layout` (
 -- Table structure for table `oc_category_to_store`
 --
 
+DROP TABLE IF EXISTS `oc_category_to_store`;
 CREATE TABLE IF NOT EXISTS `oc_category_to_store` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -665,6 +681,7 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 -- Table structure for table `oc_country`
 --
 
+DROP TABLE IF EXISTS `oc_country`;
 CREATE TABLE IF NOT EXISTS `oc_country` (
   `country_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
@@ -937,6 +954,7 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 -- Table structure for table `oc_coupon`
 --
 
+DROP TABLE IF EXISTS `oc_coupon`;
 CREATE TABLE IF NOT EXISTS `oc_coupon` (
   `coupon_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
@@ -970,6 +988,7 @@ INSERT INTO `oc_coupon` (`coupon_id`, `name`, `code`, `type`, `discount`, `logge
 -- Table structure for table `oc_coupon_category`
 --
 
+DROP TABLE IF EXISTS `oc_coupon_category`;
 CREATE TABLE IF NOT EXISTS `oc_coupon_category` (
   `coupon_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -982,6 +1001,7 @@ CREATE TABLE IF NOT EXISTS `oc_coupon_category` (
 -- Table structure for table `oc_coupon_history`
 --
 
+DROP TABLE IF EXISTS `oc_coupon_history`;
 CREATE TABLE IF NOT EXISTS `oc_coupon_history` (
   `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `coupon_id` int(11) NOT NULL,
@@ -998,6 +1018,7 @@ CREATE TABLE IF NOT EXISTS `oc_coupon_history` (
 -- Table structure for table `oc_coupon_product`
 --
 
+DROP TABLE IF EXISTS `oc_coupon_product`;
 CREATE TABLE IF NOT EXISTS `oc_coupon_product` (
   `coupon_product_id` int(11) NOT NULL AUTO_INCREMENT,
   `coupon_id` int(11) NOT NULL,
@@ -1011,6 +1032,7 @@ CREATE TABLE IF NOT EXISTS `oc_coupon_product` (
 -- Table structure for table `oc_currency`
 --
 
+DROP TABLE IF EXISTS `oc_currency`;
 CREATE TABLE IF NOT EXISTS `oc_currency` (
   `currency_id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(32) NOT NULL,
@@ -1029,9 +1051,9 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.62199998, 1, '2014-10-07 19:38:39'),
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2014-10-07 19:38:39'),
-(3, 'Euro', 'EUR', '', '€', '2', 0.79119998, 1, '2014-10-07 19:38:39');
+(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.62199998, 0, '2014-10-08 18:57:26'),
+(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2014-10-08 15:54:20'),
+(3, 'Euro', 'EUR', '', '€', '2', 0.79119998, 0, '2014-10-08 18:57:20');
 
 -- --------------------------------------------------------
 
@@ -1039,6 +1061,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 -- Table structure for table `oc_customer`
 --
 
+DROP TABLE IF EXISTS `oc_customer`;
 CREATE TABLE IF NOT EXISTS `oc_customer` (
   `customer_id` int(11) NOT NULL AUTO_INCREMENT,
   `store_id` int(11) NOT NULL DEFAULT '0',
@@ -1076,6 +1099,7 @@ INSERT INTO `oc_customer` (`customer_id`, `store_id`, `firstname`, `lastname`, `
 -- Table structure for table `oc_customer_ban_ip`
 --
 
+DROP TABLE IF EXISTS `oc_customer_ban_ip`;
 CREATE TABLE IF NOT EXISTS `oc_customer_ban_ip` (
   `customer_ban_ip_id` int(11) NOT NULL AUTO_INCREMENT,
   `ip` varchar(40) NOT NULL,
@@ -1089,6 +1113,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_ban_ip` (
 -- Table structure for table `oc_customer_field`
 --
 
+DROP TABLE IF EXISTS `oc_customer_field`;
 CREATE TABLE IF NOT EXISTS `oc_customer_field` (
   `customer_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
@@ -1105,6 +1130,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_field` (
 -- Table structure for table `oc_customer_group`
 --
 
+DROP TABLE IF EXISTS `oc_customer_group`;
 CREATE TABLE IF NOT EXISTS `oc_customer_group` (
   `customer_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `approval` int(1) NOT NULL,
@@ -1129,6 +1155,7 @@ INSERT INTO `oc_customer_group` (`customer_group_id`, `approval`, `company_id_di
 -- Table structure for table `oc_customer_group_description`
 --
 
+DROP TABLE IF EXISTS `oc_customer_group_description`;
 CREATE TABLE IF NOT EXISTS `oc_customer_group_description` (
   `customer_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1151,6 +1178,7 @@ INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`,
 -- Table structure for table `oc_customer_history`
 --
 
+DROP TABLE IF EXISTS `oc_customer_history`;
 CREATE TABLE IF NOT EXISTS `oc_customer_history` (
   `customer_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
@@ -1165,6 +1193,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_history` (
 -- Table structure for table `oc_customer_ip`
 --
 
+DROP TABLE IF EXISTS `oc_customer_ip`;
 CREATE TABLE IF NOT EXISTS `oc_customer_ip` (
   `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
@@ -1189,6 +1218,7 @@ INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added
 -- Table structure for table `oc_customer_online`
 --
 
+DROP TABLE IF EXISTS `oc_customer_online`;
 CREATE TABLE IF NOT EXISTS `oc_customer_online` (
   `ip` varchar(40) NOT NULL,
   `customer_id` int(11) NOT NULL,
@@ -1204,6 +1234,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_online` (
 -- Table structure for table `oc_customer_reward`
 --
 
+DROP TABLE IF EXISTS `oc_customer_reward`;
 CREATE TABLE IF NOT EXISTS `oc_customer_reward` (
   `customer_reward_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL DEFAULT '0',
@@ -1220,6 +1251,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_reward` (
 -- Table structure for table `oc_customer_transaction`
 --
 
+DROP TABLE IF EXISTS `oc_customer_transaction`;
 CREATE TABLE IF NOT EXISTS `oc_customer_transaction` (
   `customer_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
@@ -1236,6 +1268,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_transaction` (
 -- Table structure for table `oc_custom_field`
 --
 
+DROP TABLE IF EXISTS `oc_custom_field`;
 CREATE TABLE IF NOT EXISTS `oc_custom_field` (
   `custom_field_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
@@ -1253,6 +1286,7 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field` (
 -- Table structure for table `oc_custom_field_description`
 --
 
+DROP TABLE IF EXISTS `oc_custom_field_description`;
 CREATE TABLE IF NOT EXISTS `oc_custom_field_description` (
   `custom_field_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1266,6 +1300,7 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_description` (
 -- Table structure for table `oc_custom_field_to_customer_group`
 --
 
+DROP TABLE IF EXISTS `oc_custom_field_to_customer_group`;
 CREATE TABLE IF NOT EXISTS `oc_custom_field_to_customer_group` (
   `custom_field_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -1278,6 +1313,7 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_to_customer_group` (
 -- Table structure for table `oc_custom_field_value`
 --
 
+DROP TABLE IF EXISTS `oc_custom_field_value`;
 CREATE TABLE IF NOT EXISTS `oc_custom_field_value` (
   `custom_field_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `custom_field_id` int(11) NOT NULL,
@@ -1291,6 +1327,7 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_value` (
 -- Table structure for table `oc_custom_field_value_description`
 --
 
+DROP TABLE IF EXISTS `oc_custom_field_value_description`;
 CREATE TABLE IF NOT EXISTS `oc_custom_field_value_description` (
   `custom_field_value_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1305,6 +1342,7 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_value_description` (
 -- Table structure for table `oc_download`
 --
 
+DROP TABLE IF EXISTS `oc_download`;
 CREATE TABLE IF NOT EXISTS `oc_download` (
   `download_id` int(11) NOT NULL AUTO_INCREMENT,
   `filename` varchar(128) NOT NULL,
@@ -1320,6 +1358,7 @@ CREATE TABLE IF NOT EXISTS `oc_download` (
 -- Table structure for table `oc_download_description`
 --
 
+DROP TABLE IF EXISTS `oc_download_description`;
 CREATE TABLE IF NOT EXISTS `oc_download_description` (
   `download_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1333,6 +1372,7 @@ CREATE TABLE IF NOT EXISTS `oc_download_description` (
 -- Table structure for table `oc_extension`
 --
 
+DROP TABLE IF EXISTS `oc_extension`;
 CREATE TABLE IF NOT EXISTS `oc_extension` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
@@ -1383,6 +1423,7 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 -- Table structure for table `oc_filter`
 --
 
+DROP TABLE IF EXISTS `oc_filter`;
 CREATE TABLE IF NOT EXISTS `oc_filter` (
   `filter_id` int(11) NOT NULL AUTO_INCREMENT,
   `filter_group_id` int(11) NOT NULL,
@@ -1396,6 +1437,7 @@ CREATE TABLE IF NOT EXISTS `oc_filter` (
 -- Table structure for table `oc_filter_description`
 --
 
+DROP TABLE IF EXISTS `oc_filter_description`;
 CREATE TABLE IF NOT EXISTS `oc_filter_description` (
   `filter_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1410,6 +1452,7 @@ CREATE TABLE IF NOT EXISTS `oc_filter_description` (
 -- Table structure for table `oc_filter_group`
 --
 
+DROP TABLE IF EXISTS `oc_filter_group`;
 CREATE TABLE IF NOT EXISTS `oc_filter_group` (
   `filter_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(3) NOT NULL,
@@ -1422,6 +1465,7 @@ CREATE TABLE IF NOT EXISTS `oc_filter_group` (
 -- Table structure for table `oc_filter_group_description`
 --
 
+DROP TABLE IF EXISTS `oc_filter_group_description`;
 CREATE TABLE IF NOT EXISTS `oc_filter_group_description` (
   `filter_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1435,6 +1479,7 @@ CREATE TABLE IF NOT EXISTS `oc_filter_group_description` (
 -- Table structure for table `oc_geo_zone`
 --
 
+DROP TABLE IF EXISTS `oc_geo_zone`;
 CREATE TABLE IF NOT EXISTS `oc_geo_zone` (
   `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
@@ -1458,6 +1503,7 @@ INSERT INTO `oc_geo_zone` (`geo_zone_id`, `name`, `description`, `date_modified`
 -- Table structure for table `oc_information`
 --
 
+DROP TABLE IF EXISTS `oc_information`;
 CREATE TABLE IF NOT EXISTS `oc_information` (
   `information_id` int(11) NOT NULL AUTO_INCREMENT,
   `bottom` int(1) NOT NULL DEFAULT '0',
@@ -1471,10 +1517,10 @@ CREATE TABLE IF NOT EXISTS `oc_information` (
 --
 
 INSERT INTO `oc_information` (`information_id`, `bottom`, `sort_order`, `status`) VALUES
-(3, 1, 3, 1),
-(4, 1, 1, 1),
-(5, 1, 4, 1),
-(6, 1, 2, 1);
+(3, 1, 3, 0),
+(4, 1, 1, 0),
+(5, 1, 4, 0),
+(6, 1, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -1482,6 +1528,7 @@ INSERT INTO `oc_information` (`information_id`, `bottom`, `sort_order`, `status`
 -- Table structure for table `oc_information_description`
 --
 
+DROP TABLE IF EXISTS `oc_information_description`;
 CREATE TABLE IF NOT EXISTS `oc_information_description` (
   `information_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1495,14 +1542,14 @@ CREATE TABLE IF NOT EXISTS `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`) VALUES
-(4, 1, 'About Us', '&lt;p&gt;\r\n	About Us&lt;/p&gt;\r\n'),
-(5, 1, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;\r\n'),
-(3, 1, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n'),
-(6, 1, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n'),
-(4, 2, 'About Us', '&lt;p&gt;\r\n	About Us&lt;/p&gt;\r\n'),
-(5, 2, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;\r\n'),
-(3, 2, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n'),
-(6, 2, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n');
+(4, 2, 'About Us', '&lt;p&gt;About Us&lt;/p&gt;\r\n'),
+(5, 2, 'Terms &amp; Conditions', '&lt;p&gt;Terms &amp;amp; Conditions&lt;/p&gt;\r\n'),
+(3, 2, 'Privacy Policy', '&lt;p&gt;Privacy Policy&lt;/p&gt;\r\n'),
+(6, 2, 'Delivery Information', '&lt;p&gt;Delivery Information&lt;/p&gt;\r\n'),
+(4, 1, 'About Us', '&lt;p&gt;About Us&lt;/p&gt;\r\n'),
+(5, 1, 'Terms &amp; Conditions', '&lt;p&gt;Terms &amp;amp; Conditions&lt;/p&gt;\r\n'),
+(3, 1, 'Privacy Policy', '&lt;p&gt;Privacy Policy&lt;/p&gt;\r\n'),
+(6, 1, 'Delivery Information', '&lt;p&gt;Delivery Information&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -1510,6 +1557,7 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 -- Table structure for table `oc_information_to_layout`
 --
 
+DROP TABLE IF EXISTS `oc_information_to_layout`;
 CREATE TABLE IF NOT EXISTS `oc_information_to_layout` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -1523,6 +1571,7 @@ CREATE TABLE IF NOT EXISTS `oc_information_to_layout` (
 -- Table structure for table `oc_information_to_store`
 --
 
+DROP TABLE IF EXISTS `oc_information_to_store`;
 CREATE TABLE IF NOT EXISTS `oc_information_to_store` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -1545,6 +1594,7 @@ INSERT INTO `oc_information_to_store` (`information_id`, `store_id`) VALUES
 -- Table structure for table `oc_kbm_article`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_article`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_article` (
   `article_id` int(11) NOT NULL AUTO_INCREMENT,
   `author_id` int(11) NOT NULL,
@@ -1580,6 +1630,7 @@ INSERT INTO `oc_kbm_article` (`article_id`, `author_id`, `viewed`, `featured_ima
 -- Table structure for table `oc_kbm_article_description`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_article_description`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_article_description` (
   `article_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1623,6 +1674,7 @@ INSERT INTO `oc_kbm_article_description` (`article_id`, `language_id`, `name`, `
 -- Table structure for table `oc_kbm_article_related`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_article_related`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_article_related` (
   `article_id` int(11) NOT NULL,
   `related_id` int(11) NOT NULL,
@@ -1635,6 +1687,7 @@ CREATE TABLE IF NOT EXISTS `oc_kbm_article_related` (
 -- Table structure for table `oc_kbm_article_to_category`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_article_to_category`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_article_to_category` (
   `article_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
@@ -1662,6 +1715,7 @@ INSERT INTO `oc_kbm_article_to_category` (`article_id`, `category_id`) VALUES
 -- Table structure for table `oc_kbm_article_to_layout`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_article_to_layout`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_article_to_layout` (
   `article_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -1690,6 +1744,7 @@ INSERT INTO `oc_kbm_article_to_layout` (`article_id`, `store_id`, `layout_id`) V
 -- Table structure for table `oc_kbm_article_to_store`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_article_to_store`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_article_to_store` (
   `article_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
@@ -1717,6 +1772,7 @@ INSERT INTO `oc_kbm_article_to_store` (`article_id`, `store_id`) VALUES
 -- Table structure for table `oc_kbm_author`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_author`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_author` (
   `author_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -1738,6 +1794,7 @@ INSERT INTO `oc_kbm_author` (`author_id`, `name`, `user_id`, `role_id`) VALUES
 -- Table structure for table `oc_kbm_category`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_category`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_category` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT '0',
@@ -1768,6 +1825,7 @@ INSERT INTO `oc_kbm_category` (`category_id`, `parent_id`, `image`, `column`, `a
 -- Table structure for table `oc_kbm_category_description`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_category_description`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_category_description` (
   `category_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -1791,6 +1849,7 @@ INSERT INTO `oc_kbm_category_description` (`category_id`, `language_id`, `name`,
 -- Table structure for table `oc_kbm_category_path`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_category_path`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_category_path` (
   `category_id` int(11) NOT NULL,
   `path_id` int(11) NOT NULL,
@@ -1812,6 +1871,7 @@ INSERT INTO `oc_kbm_category_path` (`category_id`, `path_id`, `level`) VALUES
 -- Table structure for table `oc_kbm_category_to_layout`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_category_to_layout`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_category_to_layout` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -1832,6 +1892,7 @@ INSERT INTO `oc_kbm_category_to_layout` (`category_id`, `store_id`, `layout_id`)
 -- Table structure for table `oc_kbm_category_to_store`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_category_to_store`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_category_to_store` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
@@ -1851,6 +1912,7 @@ INSERT INTO `oc_kbm_category_to_store` (`category_id`, `store_id`) VALUES
 -- Table structure for table `oc_kbm_comment`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_comment`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `article_id` int(11) NOT NULL,
@@ -1878,6 +1940,7 @@ INSERT INTO `oc_kbm_comment` (`comment_id`, `article_id`, `parent_comment_id`, `
 -- Table structure for table `oc_kbm_permission`
 --
 
+DROP TABLE IF EXISTS `oc_kbm_permission`;
 CREATE TABLE IF NOT EXISTS `oc_kbm_permission` (
   `role_id` int(3) NOT NULL,
   `permissions` text NOT NULL,
@@ -1899,6 +1962,7 @@ INSERT INTO `oc_kbm_permission` (`role_id`, `permissions`) VALUES
 -- Table structure for table `oc_kcp_skin`
 --
 
+DROP TABLE IF EXISTS `oc_kcp_skin`;
 CREATE TABLE IF NOT EXISTS `oc_kcp_skin` (
   `theme_id` varchar(64) NOT NULL,
   `skin_id` varchar(64) NOT NULL,
@@ -1923,6 +1987,7 @@ INSERT INTO `oc_kcp_skin` (`theme_id`, `skin_id`, `name`, `root_skin_id`) VALUES
 -- Table structure for table `oc_kcp_skin_option`
 --
 
+DROP TABLE IF EXISTS `oc_kcp_skin_option`;
 CREATE TABLE IF NOT EXISTS `oc_kcp_skin_option` (
   `option` varchar(64) NOT NULL,
   `theme_id` varchar(64) NOT NULL,
@@ -2080,62 +2145,63 @@ INSERT INTO `oc_kcp_skin_option` (`option`, `theme_id`, `skin_id`, `value`) VALU
 ('view_button_text', 'start', 'style_1', '{"ar":"abc","en":"Quick View"}'),
 ('zoom_window_height', 'start', 'style_1', '"300"'),
 ('zoom_window_width', 'start', 'style_1', '"300"'),
-('information_content', 'start', 'style_2', '{"ar":"","en":"<img alt=\\"\\" src=\\"http:\\/\\/bling.local\\/image\\/data\\/home_05.png\\" style=\\"width: 171px; height: 172px;\\" \\/>\\n<p>Fusce convallis, marius imperdiet gravida bibendum, nisl turpis sucipit maris, sed placeta ipsum. Fusce convallis, marius imperdiet gravida bibendum, nisl turpis scuipit maris, sed placeta ipsum.<\\/p>\\n<a href=\\"#\\">read more<\\/a>"}'),
-('image_zoom_type', 'start', 'style_2', '"inner_cloud"'),
-('heading_font', 'start', 'style_2', '{"font_family":"Varela Round","font_style":"normal","font_weight":"normal","text_style_transform":"none"}'),
-('header_background_color', 'start', 'style_2', '"rgba(216, 74, 74, 0)"'),
-('menu_bg_color', 'start', 'style_2', '"#f8f8f8"'),
-('maximum_width', 'start', 'style_2', '"1170px"'),
-('map_type', 'start', 'style_2', '"ROADMAP"'),
-('longitude', 'start', 'style_2', '"151.209744"'),
-('layout_style', 'start', 'style_2', '"boxed"'),
-('latitude', 'start', 'style_2', '"-33.878715"'),
-('notification_show_time', 'start', 'style_2', '"3000"'),
-('mobile_1', 'start', 'style_2', '"64646456"'),
-('menu_font', 'start', 'style_2', '{"font_family":"Varela Round"}'),
-('footer_background_color', 'start', 'style_2', '"#ffffff"'),
-('fax_1', 'start', 'style_2', '""'),
-('email_1', 'start', 'style_2', '"contact@kulerthemes.com"'),
-('display_product_mode', 'start', 'style_2', '"grid"'),
-('menu_item_color', 'start', 'style_2', '"#73767a"'),
-('product_image_width', 'start', 'style_2', '"120"'),
-('search_result_limit', 'start', 'style_2', '"8"'),
-('footer_heading_color', 'start', 'style_2', '"#afe66c"'),
-('product_description_limit', 'start', 'style_2', '"200"'),
-('product_image_height', 'start', 'style_2', '"100"'),
-('custom_tab_2_title', 'start', 'style_2', '{"en":"Custom Tab 2"}'),
-('phone_1', 'start', 'style_2', '"655645646"'),
-('custom_copyright', 'start', 'style_2', '{"ar":"","en":""}'),
-('custom_tab_1_title', 'start', 'style_2', '{"en":"Custom Tab 1"}'),
-('information_title', 'start', 'style_2', '{"en":"About us"}'),
-('payment_icons', 'start', 'style_2', '[{"$$hashKey":"03L","image":"data\\/demo\\/start\\/payment_icons\\/visa.png","link":"","name":{"ar":"visa","en":"visa"},"new_tab":"true","sort":""},{"$$hashKey":"03S","image":"data\\/demo\\/start\\/payment_icons\\/master.png","link":"","name":{"ar":"master card","en":"master card"},"new_tab":"true","sort":""},{"$$hashKey":"03Z","image":"data\\/demo\\/start\\/payment_icons\\/paypal.png","link":"","name":{"ar":"paypal","en":"paypal"},"new_tab":"true","sort":""},{"$$hashKey":"046","image":"data\\/demo\\/start\\/payment_icons\\/amex.png","link":"","name":{"ar":"american express","en":"american express"},"new_tab":"true","sort":""},{"$$hashKey":"04D","image":"data\\/demo\\/start\\/payment_icons\\/discovery.png","link":"","name":{"ar":"discover","en":"discover"},"new_tab":"true","sort":""},{"$$hashKey":"04K","image":"data\\/demo\\/start\\/payment_icons\\/cirrus.png","link":"","name":{"ar":"cirrus","en":"cirrus"},"new_tab":"true","sort":""}]'),
-('custom_information', 'start', 'style_2', '{"ar":"","en":"<span style=\\"font-size: 13px;\\">Say Hello! Don&#39;t be shy!<\\/span>"}'),
-('custom_tab_2_content', 'start', 'style_2', '{"ar":"","en":"<p>This is a custom block edited from Kuler CP.<\\/p>\\n\\n<p>You can insert your payment method information&nbsp;or contact details here.<\\/p>\\n"}'),
-('custom_tab_1_content', 'start', 'style_2', '{"ar":"","en":"<p>This is a custom block edited from Kuler CP.<\\/p>\\n\\n<p>You can insert your payment method information&nbsp;or contact details here.<\\/p>\\n"}'),
-('custom_block_content', 'start', 'style_2', '"<p>This is a custom block edited from Kuler CP.<\\/p>\\n\\n<p>You can insert your payment method information&nbsp;or contact details here.<\\/p>\\n"'),
-('body_text_color', 'start', 'style_2', '"#6a5f5f"'),
-('body_pattern', 'start', 'style_2', '""'),
-('body_main_color', 'start', 'style_2', '"#b4d88b"'),
-('body_font', 'start', 'style_2', '{"font_family":"Varela Round"}'),
-('category_menu_type', 'start', 'style_2', '"accordion"'),
-('skype_1', 'start', 'style_2', '"kulerthemes"'),
-('sub_category_image_size', 'start', 'style_2', '"80"'),
-('social_icon_youtube_link', 'start', 'style_2', '"#"'),
-('social_icon_google_plus_link', 'start', 'style_2', '"#"'),
-('social_icon_rss_link', 'start', 'style_2', '"#"'),
-('social_icon_twitter_link', 'start', 'style_2', '"#"'),
-('social_icon_facebook_link', 'start', 'style_2', '"#"'),
-('body_bg_color', 'start', 'style_2', '"#f8f8f8"'),
-('newsletter_button_text', 'start', 'style_2', '{"en":"Subscribe"}'),
-('footer_link_color', 'start', 'style_2', '"#827676"'),
-('topbar_link_hover_color', 'start', 'style_2', '"#eee7e7"'),
-('topbar_text_color', 'start', 'style_2', '"#dddbdb"'),
+('icon_size', 'start', 'style_2', '"24px"'),
+('footer_link_hover_color', 'start', 'style_2', '"#36376e"'),
+('custom_css', 'start', 'style_2', '""'),
+('icon_style', 'start', 'style_2', '"square"'),
 ('topbar_link_color', 'start', 'style_2', '"#dadada"'),
+('topbar_text_color', 'start', 'style_2', '"#dddbdb"'),
 ('topbar_border_color', 'start', 'style_2', '"#f0f0f0"'),
 ('topbar_background_color', 'start', 'style_2', '"rgba(246, 246, 246, 0)"'),
-('newsletter_title', 'start', 'style_2', '{"en":"Newsletter"}'),
-('contact_title', 'start', 'style_2', '{"en":"Contact"}'),
-('scroll_up_text', 'start', 'style_2', '{"ar":"","en":"Scroll up"}'),
+('body_bg_color', 'start', 'style_2', '"#f8f8f8"'),
+('topbar_link_hover_color', 'start', 'style_2', '"#eee7e7"'),
+('footer_link_color', 'start', 'style_2', '"#827676"'),
+('social_icon_facebook_link', 'start', 'style_2', '"#"'),
+('social_icon_rss_link', 'start', 'style_2', '"#"'),
+('social_icon_twitter_link', 'start', 'style_2', '"#"'),
+('social_icon_google_plus_link', 'start', 'style_2', '"#"'),
+('social_icon_youtube_link', 'start', 'style_2', '"#"'),
+('sub_category_image_size', 'start', 'style_2', '"80"'),
+('skype_1', 'start', 'style_2', '"kulerthemes"'),
+('body_pattern', 'start', 'style_2', '""'),
+('category_menu_type', 'start', 'style_2', '"accordion"'),
+('body_main_color', 'start', 'style_2', '"#b4d88b"'),
+('custom_tab_1_title', 'start', 'style_2', '{"en":"Custom Tab 1"}'),
+('phone_1', 'start', 'style_2', '"655645646"'),
+('custom_tab_2_title', 'start', 'style_2', '{"en":"Custom Tab 2"}'),
+('information_title', 'start', 'style_2', '{"en":"About us"}'),
+('payment_icons', 'start', 'style_2', '[{"$$hashKey":"03L","image":"data\\/demo\\/start\\/payment_icons\\/visa.png","link":"","name":{"ar":"visa","en":"visa"},"new_tab":"true","sort":""},{"$$hashKey":"03S","image":"data\\/demo\\/start\\/payment_icons\\/master.png","link":"","name":{"ar":"master card","en":"master card"},"new_tab":"true","sort":""},{"$$hashKey":"03Z","image":"data\\/demo\\/start\\/payment_icons\\/paypal.png","link":"","name":{"ar":"paypal","en":"paypal"},"new_tab":"true","sort":""},{"$$hashKey":"046","image":"data\\/demo\\/start\\/payment_icons\\/amex.png","link":"","name":{"ar":"american express","en":"american express"},"new_tab":"true","sort":""},{"$$hashKey":"04D","image":"data\\/demo\\/start\\/payment_icons\\/discovery.png","link":"","name":{"ar":"discover","en":"discover"},"new_tab":"true","sort":""},{"$$hashKey":"04K","image":"data\\/demo\\/start\\/payment_icons\\/cirrus.png","link":"","name":{"ar":"cirrus","en":"cirrus"},"new_tab":"true","sort":""}]'),
+('custom_copyright', 'start', 'style_2', '{"ar":"","en":""}'),
+('product_image_height', 'start', 'style_2', '"100"'),
+('product_description_limit', 'start', 'style_2', '"200"'),
+('footer_heading_color', 'start', 'style_2', '"#afe66c"'),
+('search_result_limit', 'start', 'style_2', '"8"'),
+('menu_font', 'start', 'style_2', '{"font_family":"Varela Round"}'),
+('display_product_mode', 'start', 'style_2', '"grid"'),
+('email_1', 'start', 'style_2', '"contact@kulerthemes.com"'),
+('fax_1', 'start', 'style_2', '""'),
+('body_font', 'start', 'style_2', '{"font_family":"Varela Round"}'),
+('footer_background_color', 'start', 'style_2', '"#ffffff"'),
+('body_text_color', 'start', 'style_2', '"#6a5f5f"'),
+('custom_tab_1_content', 'start', 'style_2', '{"ar":"","en":"<p>This is a custom block edited from Kuler CP.<\\/p>\\n\\n<p>You can insert your payment method information&nbsp;or contact details here.<\\/p>\\n"}'),
+('custom_information', 'start', 'style_2', '{"ar":"","en":"<span style=\\"font-size: 13px;\\">Say Hello! Don&#39;t be shy!<\\/span>"}'),
+('custom_block_content', 'start', 'style_2', '"<p>This is a custom block edited from Kuler CP.<\\/p>\\n\\n<p>You can insert your payment method information&nbsp;or contact details here.<\\/p>\\n"'),
+('product_image_width', 'start', 'style_2', '"120"'),
+('custom_tab_2_content', 'start', 'style_2', '{"ar":"","en":"<p>This is a custom block edited from Kuler CP.<\\/p>\\n\\n<p>You can insert your payment method information&nbsp;or contact details here.<\\/p>\\n"}'),
+('menu_item_color', 'start', 'style_2', '"#73767a"'),
+('mobile_1', 'start', 'style_2', '"64646456"'),
+('notification_show_time', 'start', 'style_2', '"3000"'),
+('map_type', 'start', 'style_2', '"ROADMAP"'),
+('menu_bg_color', 'start', 'style_2', '"#f8f8f8"'),
+('maximum_width', 'start', 'style_2', '"1170px"'),
+('latitude', 'start', 'style_2', '"-33.878715"'),
+('longitude', 'start', 'style_2', '"151.209744"'),
+('layout_style', 'start', 'style_2', '"boxed"'),
+('image_zoom_type', 'start', 'style_2', '"inner_cloud"'),
+('home_icon_type', 'start', 'style_2', '"text"'),
+('heading_font', 'start', 'style_2', '{"font_family":"Varela Round","font_style":"normal","font_weight":"normal","text_style_transform":"none"}'),
+('header_background_color', 'start', 'style_2', '"rgba(216, 74, 74, 0)"'),
+('information_content', 'start', 'style_2', '{"ar":"","en":"<img alt=\\"\\" src=\\"http:\\/\\/bling.local\\/image\\/data\\/home_05.png\\" style=\\"width: 171px; height: 172px;\\" \\/>\\n<p>Fusce convallis, marius imperdiet gravida bibendum, nisl turpis sucipit maris, sed placeta ipsum. Fusce convallis, marius imperdiet gravida bibendum, nisl turpis scuipit maris, sed placeta ipsum.<\\/p>\\n<a href=\\"#\\">read more<\\/a>"}'),
 ('body_font', 'start', 'style_3', '{"font_family":"Varela Round"}'),
 ('body_main_color', 'start', 'style_3', '"#40AF63"'),
 ('body_pattern', 'start', 'style_3', '"catalog\\/view\\/theme\\/start\\/data\\/patterns\\/wood.png"'),
@@ -2420,20 +2486,24 @@ INSERT INTO `oc_kcp_skin_option` (`option`, `theme_id`, `skin_id`, `value`) VALU
 ('view_button_text', 'start', 'style_4', '{"ar":"abc","en":"Quick View"}'),
 ('zoom_window_height', 'start', 'style_4', '"300"'),
 ('zoom_window_width', 'start', 'style_4', '"300"'),
-('search_field_text', 'start', 'style_2', '{"ar":"Search","en":"Search"}'),
-('view_button_text', 'start', 'style_2', '{"en":"Quick View"}'),
+('newsletter_button_text', 'start', 'style_2', '{"en":"Subscribe"}'),
+('newsletter_title', 'start', 'style_2', '{"en":"Newsletter"}'),
 ('more_details_button_text', 'start', 'style_2', '{"ar":"","en":"More Details"}'),
-('mobile_menu_title', 'start', 'style_2', '{"ar":"MENU","en":"MENU"}'),
+('contact_title', 'start', 'style_2', '{"en":"Contact"}'),
+('scroll_up_text', 'start', 'style_2', '{"ar":"","en":"Scroll up"}'),
+('view_button_text', 'start', 'style_2', '{"en":"Quick View"}'),
+('search_field_text', 'start', 'style_2', '{"ar":"Search","en":"Search"}'),
+('mobile_menu_title', 'start', 'style_2', '{"ar":"MENU","en":"123.456.7890"}'),
 ('custom_js_status', 'start', 'style_2', '"false"'),
-('custom_css_status', 'start', 'style_2', '"false"'),
+('custom_css_status', 'start', 'style_2', '"true"'),
 ('custom_css_file_status', 'start', 'style_2', '"false"'),
-('show_payment_icons', 'start', 'style_2', '"true"'),
+('show_payment_icons', 'start', 'style_2', '"false"'),
 ('show_custom_copyright', 'start', 'style_2', '"false"'),
-('show_newsletter', 'start', 'style_2', '"true"'),
 ('show_newsletter_title', 'start', 'style_2', '"false"'),
-('social_icon_pinterest', 'start', 'style_2', '"false"'),
+('show_newsletter', 'start', 'style_2', '"false"'),
 ('social_icon_rss', 'start', 'style_2', '"true"'),
 ('social_icon_instagram', 'start', 'style_2', '"false"'),
+('social_icon_pinterest', 'start', 'style_2', '"false"'),
 ('social_icon_youtube', 'start', 'style_2', '"true"'),
 ('social_icon_google_plus', 'start', 'style_2', '"true"'),
 ('social_icon_twitter', 'start', 'style_2', '"true"'),
@@ -2444,13 +2514,13 @@ INSERT INTO `oc_kcp_skin_option` (`option`, `theme_id`, `skin_id`, `value`) VALU
 ('show_twitter_footer', 'start', 'style_2', '"false"'),
 ('show_twitter_header', 'start', 'style_2', '"false"'),
 ('show_twitter_title', 'start', 'style_2', '"false"'),
-('show_twitter', 'start', 'style_2', '"false"'),
-('show_facebook_posts', 'start', 'style_2', '"false"'),
 ('show_facebook_friend_faces', 'start', 'style_2', '"false"'),
+('show_facebook_posts', 'start', 'style_2', '"false"'),
+('show_twitter', 'start', 'style_2', '"false"'),
 ('show_facebook_title', 'start', 'style_2', '"false"'),
 ('show_facebook', 'start', 'style_2', '"false"'),
-('show_contact_title', 'start', 'style_2', '"true"'),
-('show_contact', 'start', 'style_2', '"true"'),
+('show_contact_title', 'start', 'style_2', '"false"'),
+('show_contact', 'start', 'style_2', '"false"'),
 ('show_information_title', 'start', 'style_2', '"true"'),
 ('show_information', 'start', 'style_2', '"true"'),
 ('enable_scroll_up', 'start', 'style_2', '"true"'),
@@ -2468,8 +2538,8 @@ INSERT INTO `oc_kcp_skin_option` (`option`, `theme_id`, `skin_id`, `value`) VALU
 ('show_custom_block', 'start', 'style_2', '"true"'),
 ('image_lightbox', 'start', 'style_2', '"true"'),
 ('default_sharing', 'start', 'style_2', '"true"'),
-('show_tax', 'start', 'style_2', '"false"'),
 ('show_number_quantity', 'start', 'style_2', '"true"'),
+('show_tax', 'start', 'style_2', '"false"'),
 ('show_save_percent', 'start', 'style_2', '"false"'),
 ('show_brand_logo', 'start', 'style_2', '"false"'),
 ('sub_categories_image_carousel', 'start', 'style_2', '"false"'),
@@ -2487,10 +2557,9 @@ INSERT INTO `oc_kcp_skin_option` (`option`, `theme_id`, `skin_id`, `value`) VALU
 ('search_in_specific_manufacturer', 'start', 'style_2', '"false"'),
 ('search_in_specific_category', 'start', 'style_2', '"false"'),
 ('live_search_status', 'start', 'style_2', '"true"'),
-('multi_level_default_menu', 'start', 'style_2', '"false"'),
+('multi_level_default_menu', 'start', 'style_2', '"true"'),
 ('fixed_header', 'start', 'style_2', '"false"'),
-('button_select_list', 'start', 'style_2', '"false"'),
-('footer_link_hover_color', 'start', 'style_2', '"#36376e"');
+('button_select_list', 'start', 'style_2', '"false"');
 
 -- --------------------------------------------------------
 
@@ -2498,6 +2567,7 @@ INSERT INTO `oc_kcp_skin_option` (`option`, `theme_id`, `skin_id`, `value`) VALU
 -- Table structure for table `oc_kcp_theme`
 --
 
+DROP TABLE IF EXISTS `oc_kcp_theme`;
 CREATE TABLE IF NOT EXISTS `oc_kcp_theme` (
   `theme_id` varchar(64) NOT NULL,
   `version` varchar(10) NOT NULL,
@@ -2517,6 +2587,7 @@ INSERT INTO `oc_kcp_theme` (`theme_id`, `version`) VALUES
 -- Table structure for table `oc_language`
 --
 
+DROP TABLE IF EXISTS `oc_language`;
 CREATE TABLE IF NOT EXISTS `oc_language` (
   `language_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
@@ -2537,7 +2608,7 @@ CREATE TABLE IF NOT EXISTS `oc_language` (
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `filename`, `sort_order`, `status`) VALUES
 (1, 'English', 'en', 'en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 'english', 1, 1),
-(2, 'Arabic', 'ar', 'ar_LB', 'lb.png', 'arabic', 'arabic', 2, 1);
+(2, 'Arabic', 'ar', 'ar_LB', 'lb.png', 'arabic', 'arabic', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -2545,6 +2616,7 @@ INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `di
 -- Table structure for table `oc_layout`
 --
 
+DROP TABLE IF EXISTS `oc_layout`;
 CREATE TABLE IF NOT EXISTS `oc_layout` (
   `layout_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -2575,6 +2647,7 @@ INSERT INTO `oc_layout` (`layout_id`, `name`) VALUES
 -- Table structure for table `oc_layout_route`
 --
 
+DROP TABLE IF EXISTS `oc_layout_route`;
 CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,
   `layout_id` int(11) NOT NULL,
@@ -2607,6 +2680,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 -- Table structure for table `oc_length_class`
 --
 
+DROP TABLE IF EXISTS `oc_length_class`;
 CREATE TABLE IF NOT EXISTS `oc_length_class` (
   `length_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `value` decimal(15,8) NOT NULL,
@@ -2628,6 +2702,7 @@ INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
 -- Table structure for table `oc_length_class_description`
 --
 
+DROP TABLE IF EXISTS `oc_length_class_description`;
 CREATE TABLE IF NOT EXISTS `oc_length_class_description` (
   `length_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
@@ -2654,6 +2729,7 @@ INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `ti
 -- Table structure for table `oc_manufacturer`
 --
 
+DROP TABLE IF EXISTS `oc_manufacturer`;
 CREATE TABLE IF NOT EXISTS `oc_manufacturer` (
   `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -2699,6 +2775,7 @@ INSERT INTO `oc_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`)
 -- Table structure for table `oc_manufacturer_to_store`
 --
 
+DROP TABLE IF EXISTS `oc_manufacturer_to_store`;
 CREATE TABLE IF NOT EXISTS `oc_manufacturer_to_store` (
   `manufacturer_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -2742,6 +2819,7 @@ INSERT INTO `oc_manufacturer_to_store` (`manufacturer_id`, `store_id`) VALUES
 -- Table structure for table `oc_option`
 --
 
+DROP TABLE IF EXISTS `oc_option`;
 CREATE TABLE IF NOT EXISTS `oc_option` (
   `option_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(32) NOT NULL,
@@ -2773,6 +2851,7 @@ INSERT INTO `oc_option` (`option_id`, `type`, `sort_order`) VALUES
 -- Table structure for table `oc_option_description`
 --
 
+DROP TABLE IF EXISTS `oc_option_description`;
 CREATE TABLE IF NOT EXISTS `oc_option_description` (
   `option_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -2816,6 +2895,7 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 -- Table structure for table `oc_option_value`
 --
 
+DROP TABLE IF EXISTS `oc_option_value`;
 CREATE TABLE IF NOT EXISTS `oc_option_value` (
   `option_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `option_id` int(11) NOT NULL,
@@ -2862,6 +2942,7 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 -- Table structure for table `oc_option_value_description`
 --
 
+DROP TABLE IF EXISTS `oc_option_value_description`;
 CREATE TABLE IF NOT EXISTS `oc_option_value_description` (
   `option_value_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -2934,6 +3015,7 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 -- Table structure for table `oc_order`
 --
 
+DROP TABLE IF EXISTS `oc_order`;
 CREATE TABLE IF NOT EXISTS `oc_order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `invoice_no` int(11) NOT NULL DEFAULT '0',
@@ -3017,6 +3099,7 @@ INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, 
 -- Table structure for table `oc_order_download`
 --
 
+DROP TABLE IF EXISTS `oc_order_download`;
 CREATE TABLE IF NOT EXISTS `oc_order_download` (
   `order_download_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3034,6 +3117,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_download` (
 -- Table structure for table `oc_order_field`
 --
 
+DROP TABLE IF EXISTS `oc_order_field`;
 CREATE TABLE IF NOT EXISTS `oc_order_field` (
   `order_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
@@ -3050,6 +3134,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_field` (
 -- Table structure for table `oc_order_fraud`
 --
 
+DROP TABLE IF EXISTS `oc_order_fraud`;
 CREATE TABLE IF NOT EXISTS `oc_order_fraud` (
   `order_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
@@ -3113,6 +3198,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_fraud` (
 -- Table structure for table `oc_order_history`
 --
 
+DROP TABLE IF EXISTS `oc_order_history`;
 CREATE TABLE IF NOT EXISTS `oc_order_history` (
   `order_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3140,6 +3226,7 @@ INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id
 -- Table structure for table `oc_order_option`
 --
 
+DROP TABLE IF EXISTS `oc_order_option`;
 CREATE TABLE IF NOT EXISTS `oc_order_option` (
   `order_option_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3166,6 +3253,7 @@ INSERT INTO `oc_order_option` (`order_option_id`, `order_id`, `order_product_id`
 -- Table structure for table `oc_order_product`
 --
 
+DROP TABLE IF EXISTS `oc_order_product`;
 CREATE TABLE IF NOT EXISTS `oc_order_product` (
   `order_product_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3218,6 +3306,7 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `n
 -- Table structure for table `oc_order_recurring`
 --
 
+DROP TABLE IF EXISTS `oc_order_recurring`;
 CREATE TABLE IF NOT EXISTS `oc_order_recurring` (
   `order_recurring_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3248,6 +3337,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_recurring` (
 -- Table structure for table `oc_order_recurring_transaction`
 --
 
+DROP TABLE IF EXISTS `oc_order_recurring_transaction`;
 CREATE TABLE IF NOT EXISTS `oc_order_recurring_transaction` (
   `order_recurring_transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_recurring_id` int(11) NOT NULL,
@@ -3263,6 +3353,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_recurring_transaction` (
 -- Table structure for table `oc_order_status`
 --
 
+DROP TABLE IF EXISTS `oc_order_status`;
 CREATE TABLE IF NOT EXISTS `oc_order_status` (
   `order_status_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
@@ -3310,6 +3401,7 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 -- Table structure for table `oc_order_total`
 --
 
+DROP TABLE IF EXISTS `oc_order_total`;
 CREATE TABLE IF NOT EXISTS `oc_order_total` (
   `order_total_id` int(10) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3370,6 +3462,7 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `te
 -- Table structure for table `oc_order_voucher`
 --
 
+DROP TABLE IF EXISTS `oc_order_voucher`;
 CREATE TABLE IF NOT EXISTS `oc_order_voucher` (
   `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -3399,6 +3492,7 @@ INSERT INTO `oc_order_voucher` (`order_voucher_id`, `order_id`, `voucher_id`, `d
 -- Table structure for table `oc_pavoslidergroups`
 --
 
+DROP TABLE IF EXISTS `oc_pavoslidergroups`;
 CREATE TABLE IF NOT EXISTS `oc_pavoslidergroups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -3419,6 +3513,7 @@ INSERT INTO `oc_pavoslidergroups` (`id`, `title`, `params`) VALUES
 -- Table structure for table `oc_pavosliderlayers`
 --
 
+DROP TABLE IF EXISTS `oc_pavosliderlayers`;
 CREATE TABLE IF NOT EXISTS `oc_pavosliderlayers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -3446,6 +3541,7 @@ INSERT INTO `oc_pavosliderlayers` (`id`, `title`, `parent_id`, `group_id`, `para
 -- Table structure for table `oc_product`
 --
 
+DROP TABLE IF EXISTS `oc_product`;
 CREATE TABLE IF NOT EXISTS `oc_product` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(64) NOT NULL,
@@ -3551,6 +3647,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 -- Table structure for table `oc_product_attribute`
 --
 
+DROP TABLE IF EXISTS `oc_product_attribute`;
 CREATE TABLE IF NOT EXISTS `oc_product_attribute` (
   `product_id` int(11) NOT NULL,
   `attribute_id` int(11) NOT NULL,
@@ -3565,6 +3662,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_attribute` (
 -- Table structure for table `oc_product_description`
 --
 
+DROP TABLE IF EXISTS `oc_product_description`;
 CREATE TABLE IF NOT EXISTS `oc_product_description` (
   `product_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -3706,6 +3804,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 -- Table structure for table `oc_product_discount`
 --
 
+DROP TABLE IF EXISTS `oc_product_discount`;
 CREATE TABLE IF NOT EXISTS `oc_product_discount` (
   `product_discount_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
@@ -3732,6 +3831,7 @@ INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `custome
 -- Table structure for table `oc_product_filter`
 --
 
+DROP TABLE IF EXISTS `oc_product_filter`;
 CREATE TABLE IF NOT EXISTS `oc_product_filter` (
   `product_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL,
@@ -3744,6 +3844,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_filter` (
 -- Table structure for table `oc_product_image`
 --
 
+DROP TABLE IF EXISTS `oc_product_image`;
 CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `product_image_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
@@ -3877,6 +3978,7 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 -- Table structure for table `oc_product_option`
 --
 
+DROP TABLE IF EXISTS `oc_product_option`;
 CREATE TABLE IF NOT EXISTS `oc_product_option` (
   `product_option_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
@@ -3913,6 +4015,7 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 -- Table structure for table `oc_product_option_value`
 --
 
+DROP TABLE IF EXISTS `oc_product_option_value`;
 CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
   `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_option_id` int(11) NOT NULL,
@@ -3995,6 +4098,7 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 -- Table structure for table `oc_product_profile`
 --
 
+DROP TABLE IF EXISTS `oc_product_profile`;
 CREATE TABLE IF NOT EXISTS `oc_product_profile` (
   `product_id` int(11) NOT NULL,
   `profile_id` int(11) NOT NULL,
@@ -4008,6 +4112,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_profile` (
 -- Table structure for table `oc_product_recurring`
 --
 
+DROP TABLE IF EXISTS `oc_product_recurring`;
 CREATE TABLE IF NOT EXISTS `oc_product_recurring` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -4020,6 +4125,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_recurring` (
 -- Table structure for table `oc_product_related`
 --
 
+DROP TABLE IF EXISTS `oc_product_related`;
 CREATE TABLE IF NOT EXISTS `oc_product_related` (
   `product_id` int(11) NOT NULL,
   `related_id` int(11) NOT NULL,
@@ -4032,6 +4138,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_related` (
 -- Table structure for table `oc_product_reward`
 --
 
+DROP TABLE IF EXISTS `oc_product_reward`;
 CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL DEFAULT '0',
@@ -4110,6 +4217,7 @@ INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_gr
 -- Table structure for table `oc_product_special`
 --
 
+DROP TABLE IF EXISTS `oc_product_special`;
 CREATE TABLE IF NOT EXISTS `oc_product_special` (
   `product_special_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
@@ -4142,6 +4250,7 @@ INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_
 -- Table structure for table `oc_product_to_category`
 --
 
+DROP TABLE IF EXISTS `oc_product_to_category`;
 CREATE TABLE IF NOT EXISTS `oc_product_to_category` (
   `product_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -4278,6 +4387,7 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 -- Table structure for table `oc_product_to_download`
 --
 
+DROP TABLE IF EXISTS `oc_product_to_download`;
 CREATE TABLE IF NOT EXISTS `oc_product_to_download` (
   `product_id` int(11) NOT NULL,
   `download_id` int(11) NOT NULL,
@@ -4290,6 +4400,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_download` (
 -- Table structure for table `oc_product_to_layout`
 --
 
+DROP TABLE IF EXISTS `oc_product_to_layout`;
 CREATE TABLE IF NOT EXISTS `oc_product_to_layout` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
@@ -4303,6 +4414,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_layout` (
 -- Table structure for table `oc_product_to_store`
 --
 
+DROP TABLE IF EXISTS `oc_product_to_store`;
 CREATE TABLE IF NOT EXISTS `oc_product_to_store` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0',
@@ -4379,6 +4491,7 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 -- Table structure for table `oc_profile`
 --
 
+DROP TABLE IF EXISTS `oc_profile`;
 CREATE TABLE IF NOT EXISTS `oc_profile` (
   `profile_id` int(11) NOT NULL AUTO_INCREMENT,
   `sort_order` int(11) NOT NULL,
@@ -4401,6 +4514,7 @@ CREATE TABLE IF NOT EXISTS `oc_profile` (
 -- Table structure for table `oc_profile_description`
 --
 
+DROP TABLE IF EXISTS `oc_profile_description`;
 CREATE TABLE IF NOT EXISTS `oc_profile_description` (
   `profile_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -4414,6 +4528,7 @@ CREATE TABLE IF NOT EXISTS `oc_profile_description` (
 -- Table structure for table `oc_return`
 --
 
+DROP TABLE IF EXISTS `oc_return`;
 CREATE TABLE IF NOT EXISTS `oc_return` (
   `return_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -4443,6 +4558,7 @@ CREATE TABLE IF NOT EXISTS `oc_return` (
 -- Table structure for table `oc_return_action`
 --
 
+DROP TABLE IF EXISTS `oc_return_action`;
 CREATE TABLE IF NOT EXISTS `oc_return_action` (
   `return_action_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL DEFAULT '0',
@@ -4468,6 +4584,7 @@ INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUE
 -- Table structure for table `oc_return_history`
 --
 
+DROP TABLE IF EXISTS `oc_return_history`;
 CREATE TABLE IF NOT EXISTS `oc_return_history` (
   `return_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `return_id` int(11) NOT NULL,
@@ -4484,6 +4601,7 @@ CREATE TABLE IF NOT EXISTS `oc_return_history` (
 -- Table structure for table `oc_return_reason`
 --
 
+DROP TABLE IF EXISTS `oc_return_reason`;
 CREATE TABLE IF NOT EXISTS `oc_return_reason` (
   `return_reason_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL DEFAULT '0',
@@ -4513,6 +4631,7 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 -- Table structure for table `oc_return_status`
 --
 
+DROP TABLE IF EXISTS `oc_return_status`;
 CREATE TABLE IF NOT EXISTS `oc_return_status` (
   `return_status_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL DEFAULT '0',
@@ -4538,6 +4657,7 @@ INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUE
 -- Table structure for table `oc_review`
 --
 
+DROP TABLE IF EXISTS `oc_review`;
 CREATE TABLE IF NOT EXISTS `oc_review` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
@@ -4558,6 +4678,7 @@ CREATE TABLE IF NOT EXISTS `oc_review` (
 -- Table structure for table `oc_setting`
 --
 
+DROP TABLE IF EXISTS `oc_setting`;
 CREATE TABLE IF NOT EXISTS `oc_setting` (
   `setting_id` int(11) NOT NULL AUTO_INCREMENT,
   `store_id` int(11) NOT NULL DEFAULT '0',
@@ -4566,7 +4687,7 @@ CREATE TABLE IF NOT EXISTS `oc_setting` (
   `value` mediumtext NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3221 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3709 ;
 
 --
 -- Dumping data for table `oc_setting`
@@ -4594,7 +4715,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (35, 0, 'flat', 'flat_status', '1', 0),
 (36, 0, 'flat', 'flat_geo_zone_id', '0', 0),
 (37, 0, 'flat', 'flat_tax_class_id', '9', 0),
-(2789, 0, 'carousel', 'carousel_module', 'a:2:{i:0;a:9:{s:9:"banner_id";s:1:"8";s:5:"limit";s:1:"5";s:6:"scroll";s:1:"3";s:5:"width";s:3:"200";s:6:"height";s:2:"80";s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"0";s:10:"sort_order";s:1:"3";}i:1;a:9:{s:9:"banner_id";s:1:"9";s:5:"limit";s:1:"5";s:6:"scroll";s:1:"1";s:5:"width";s:3:"105";s:6:"height";s:2:"25";s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
+(3550, 0, 'carousel', 'carousel_module', 'a:2:{i:0;a:9:{s:9:"banner_id";s:1:"8";s:5:"limit";s:1:"5";s:6:"scroll";s:1:"3";s:5:"width";s:3:"200";s:6:"height";s:2:"80";s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"0";s:10:"sort_order";s:1:"3";}i:1;a:9:{s:9:"banner_id";s:1:"9";s:5:"limit";s:1:"5";s:6:"scroll";s:1:"1";s:5:"width";s:3:"105";s:6:"height";s:2:"25";s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (2023, 0, 'kuler_filter', 'op', '', 0),
 (2024, 0, 'kuler_filter', 'kuler_filter_module', 'a:1:{i:1;a:15:{s:6:"status";s:1:"1";s:10:"show_title";s:1:"1";s:5:"title";a:2:{i:1;s:6:"Filter";i:2;s:6:"Filter";}s:9:"shortcode";s:21:"[kuler_filter filter]";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:8:"category";s:1:"1";s:11:"manufacture";s:1:"1";s:9:"attribute";s:1:"1";s:6:"option";s:1:"1";s:12:"price_filter";s:1:"1";s:9:"price_min";s:1:"0";s:9:"price_max";s:4:"1000";s:8:"currency";s:3:"EUR";s:10:"sort_order";s:1:"2";}}', 1),
 (2025, 0, 'latest', 'latest_module', 'a:1:{i:0;a:7:{s:5:"limit";s:1:"5";s:11:"image_width";s:2:"80";s:12:"image_height";s:2:"80";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
@@ -4603,133 +4724,133 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (43, 0, 'credit', 'credit_status', '1', 0),
 (53, 0, 'reward', 'reward_sort_order', '2', 0),
 (54, 0, 'reward', 'reward_status', '1', 0),
-(56, 0, 'affiliate', 'affiliate_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:2:"10";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(57, 0, 'category', 'category_module', 'a:2:{i:0;a:5:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:5:"count";s:1:"0";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}i:1;a:5:{s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:5:"count";s:1:"0";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(60, 0, 'account', 'account_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"6";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
+(3545, 0, 'affiliate', 'affiliate_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:2:"10";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
+(3549, 0, 'category', 'category_module', 'a:2:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}i:1;a:4:{s:9:"layout_id";s:1:"2";s:8:"position";s:11:"column_left";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
+(3547, 0, 'account', 'account_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"6";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
 (95, 0, 'voucher', 'voucher_status', '1', 0),
 (103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
-(844, 0, 'banner', 'banner_module', 'a:1:{i:0;a:7:{s:9:"banner_id";s:1:"6";s:5:"width";s:3:"182";s:6:"height";s:3:"182";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"0";s:10:"sort_order";s:1:"3";}}', 1),
-(3122, 0, 'config', 'config_google_analytics', '&lt;script&gt;\r\n  (function(i,s,o,g,r,a,m){i[''GoogleAnalyticsObject'']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,''script'',''//www.google-analytics.com/analytics.js'',''ga'');\r\n\r\n  ga(''create'', ''UA-50925759-13'', ''auto'');\r\n  ga(''send'', ''pageview'');\r\n\r\n&lt;/script&gt;\r\n\r\n&lt;!-- Qualaroo for kulerthemes.com --&gt;\r\n&lt;!-- Paste this code right after the &lt;body&gt; tag on every page of your site. --&gt;\r\n&lt;script type=&quot;text/javascript&quot;&gt;\r\n  var _kiq = _kiq || [];\r\n  (function(){\r\n    setTimeout(function(){\r\n    var d = document, f = d.getElementsByTagName(''script'')[0], s = d.createElement(''script''); s.type = ''text/javascript'';\r\n    s.async = true; s.src = ''//s3.amazonaws.com/ki.js/54847/c0_.js''; f.parentNode.insertBefore(s, f);\r\n    }, 1);\r\n  })();\r\n&lt;/script&gt;\r\n', 0),
-(3112, 0, 'config', 'config_seo_url', '0', 0),
-(3113, 0, 'config', 'config_file_extension_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
-(3114, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/jpeg\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/tiff\r\nimage/svg+xml\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/postscript\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
-(3115, 0, 'config', 'config_maintenance', '0', 0),
-(3116, 0, 'config', 'config_password', '1', 0),
-(3117, 0, 'config', 'config_encryption', '7fc29820f6ad27397a96e52f6cd4e156', 0),
-(3118, 0, 'config', 'config_compression', '0', 0),
-(3119, 0, 'config', 'config_error_display', '1', 0),
-(3120, 0, 'config', 'config_error_log', '1', 0),
-(3121, 0, 'config', 'config_error_filename', 'error.txt', 0),
-(3188, 0, 'kuler_cp', 'skin_id', 'style_2', 0),
-(3187, 0, 'kuler_cp', 'theme_id', 'start', 0),
-(2896, 0, 'kuler_layer_slider', 'kuler_layer_slider_module', 'a:1:{i:0;a:7:{s:8:"group_id";s:1:"3";s:8:"store_id";s:1:"0";s:11:"language_id";s:1:"0";s:9:"layout_id";s:1:"1";s:8:"position";s:9:"promotion";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(3110, 0, 'config', 'config_shared', '0', 0),
-(3111, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(3108, 0, 'config', 'config_fraud_status_id', '7', 0),
-(3109, 0, 'config', 'config_secure', '0', 0),
-(3107, 0, 'config', 'config_fraud_score', '', 0),
-(3106, 0, 'config', 'config_fraud_key', '', 0),
-(3104, 0, 'config', 'config_alert_emails', '', 0),
-(3195, 0, 'kuler_slides', 'kuler_slides_module', 'a:1:{i:1;a:8:{s:6:"status";s:1:"0";s:10:"show_title";s:1:"0";s:12:"module_title";a:2:{i:1;s:11:"BEST SELLER";i:2;s:11:"BEST SELLER";}s:9:"shortcode";s:26:"[kuler_slides best_seller]";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"3";s:4:"tabs";a:1:{i:1;a:15:{s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"61";s:8:"products";s:39:"68,109,67,70,97,88,72,73,108,103,76,102";s:4:"item";s:1:"5";s:5:"limit";s:2:"15";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"344";s:4:"name";s:1:"0";s:5:"price";s:1:"0";s:6:"rating";s:1:"0";s:11:"description";s:1:"0";s:3:"add";s:1:"0";s:8:"wishlist";s:1:"0";s:7:"compare";s:1:"0";s:17:"description_limit";s:0:"";}}}}', 1),
+(3548, 0, 'banner', 'banner_module', 'a:1:{i:0;a:7:{s:9:"banner_id";s:1:"6";s:5:"width";s:3:"182";s:6:"height";s:3:"182";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"column_left";s:6:"status";s:1:"0";s:10:"sort_order";s:1:"3";}}', 1),
+(3533, 0, 'config', 'config_seo_url', '0', 0),
+(3534, 0, 'config', 'config_file_extension_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(3535, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/jpeg\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/tiff\r\nimage/svg+xml\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/postscript\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
+(3536, 0, 'config', 'config_maintenance', '0', 0),
+(3537, 0, 'config', 'config_password', '1', 0),
+(3538, 0, 'config', 'config_encryption', '7fc29820f6ad27397a96e52f6cd4e156', 0),
+(3539, 0, 'config', 'config_compression', '0', 0),
+(3540, 0, 'config', 'config_error_display', '1', 0),
+(3541, 0, 'config', 'config_error_log', '1', 0),
+(3542, 0, 'config', 'config_error_filename', 'error.txt', 0),
+(3543, 0, 'config', 'config_google_analytics', '&lt;script&gt;\r\n  (function(i,s,o,g,r,a,m){i[''GoogleAnalyticsObject'']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,''script'',''//www.google-analytics.com/analytics.js'',''ga'');\r\n\r\n  ga(''create'', ''UA-50925759-13'', ''auto'');\r\n  ga(''send'', ''pageview'');\r\n\r\n&lt;/script&gt;\r\n\r\n&lt;!-- Qualaroo for kulerthemes.com --&gt;\r\n&lt;!-- Paste this code right after the &lt;body&gt; tag on every page of your site. --&gt;\r\n&lt;script type=&quot;text/javascript&quot;&gt;\r\n  var _kiq = _kiq || [];\r\n  (function(){\r\n    setTimeout(function(){\r\n    var d = document, f = d.getElementsByTagName(''script'')[0], s = d.createElement(''script''); s.type = ''text/javascript'';\r\n    s.async = true; s.src = ''//s3.amazonaws.com/ki.js/54847/c0_.js''; f.parentNode.insertBefore(s, f);\r\n    }, 1);\r\n  })();\r\n&lt;/script&gt;\r\n', 0),
+(3704, 0, 'kuler_cp', 'skin_id', 'style_2', 0),
+(3703, 0, 'kuler_cp', 'theme_id', 'start', 0),
+(3558, 0, 'kuler_layer_slider', 'kuler_layer_slider_module', 'a:1:{i:0;a:7:{s:8:"group_id";s:1:"3";s:8:"store_id";s:1:"0";s:11:"language_id";s:1:"0";s:9:"layout_id";s:1:"1";s:8:"position";s:9:"promotion";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
+(3557, 0, 'kuler_slides', 'kuler_slides_module', 'a:1:{i:1;a:8:{s:6:"status";s:1:"0";s:10:"show_title";s:1:"0";s:12:"module_title";a:2:{i:1;s:11:"BEST SELLER";i:2;s:11:"BEST SELLER";}s:9:"shortcode";s:26:"[kuler_slides best_seller]";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"3";s:4:"tabs";a:1:{i:1;a:15:{s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"61";s:8:"products";s:39:"68,109,67,70,97,88,72,73,108,103,76,102";s:4:"item";s:1:"5";s:5:"limit";s:2:"15";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"344";s:4:"name";s:1:"0";s:5:"price";s:1:"0";s:6:"rating";s:1:"0";s:11:"description";s:1:"0";s:3:"add";s:1:"0";s:8:"wishlist";s:1:"0";s:7:"compare";s:1:"0";s:17:"description_limit";s:0:"";}}}}', 1),
 (1861, 0, 'kuler_accordion', 'kuler_accordion_module', 'a:1:{i:1;a:22:{s:6:"status";s:1:"1";s:10:"show_title";s:1:"0";s:12:"module_title";a:2:{i:1;s:9:"Accordion";i:2;s:9:"Accordion";}s:9:"shortcode";s:27:"[kuler_accordion accordion]";s:4:"type";s:7:"product";s:11:"category_id";s:2:"63";s:8:"products";s:12:"67,70,108,81";s:9:"layout_id";s:1:"3";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"1";s:5:"limit";s:1:"4";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"350";s:11:"title_limit";s:2:"20";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"1";s:16:"description_text";s:0:"";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";}}', 1),
 (3219, 0, 'kuler_contact_form', 'kuler_contact_form_module', 'a:1:{i:0;a:12:{s:9:"layout_id";s:2:"-1";s:8:"position";s:14:"footer_address";s:10:"sort_order";s:1:"1";s:6:"status";s:1:"1";s:9:"mainTitle";s:12:"CONTACT FORM";s:5:"title";a:1:{s:2:"en";s:12:"CONTACT FORM";}s:6:"active";s:4:"true";s:10:"short_code";s:33:"[kuler_contact_form contact_form]";s:9:"$$hashKey";s:3:"006";s:10:"show_title";s:1:"0";s:23:"show_custom_information";s:1:"1";s:18:"custom_information";a:1:{s:2:"en";s:398:"&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.212338688264!2d151.20974400000003!3d-33.87871499999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3d511200d9%3A0x16a18777b88ade3f!2s170+Elizabeth+St!5e0!3m2!1sen!2s!4v1402653619325&quot; width=&quot;350&quot; height=&quot;260&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot;&gt;&lt;/iframe&gt;";}}}', 1),
-(3105, 0, 'config', 'config_fraud_detection', '0', 0),
-(3103, 0, 'config', 'config_account_mail', '0', 0),
-(3102, 0, 'config', 'config_alert_mail', '0', 0),
-(3100, 0, 'config', 'config_smtp_port', '25', 0),
-(3101, 0, 'config', 'config_smtp_timeout', '5', 0),
-(3099, 0, 'config', 'config_smtp_password', '', 0),
 (910, 0, 'kbm', 'kbm_settings', 'a:8:{s:4:"home";a:4:{s:11:"description";a:2:{i:1;a:4:{s:9:"blog_name";s:18:"Kuler Blog Manager";s:12:"blog_keyword";s:0:"";s:21:"blog_meta_description";s:0:"";s:21:"blog_home_description";s:0:"";}i:2;a:4:{s:9:"blog_name";s:18:"Kuler Blog Manager";s:12:"blog_keyword";s:0:"";s:21:"blog_meta_description";s:0:"";s:21:"blog_home_description";s:0:"";}}s:10:"show_title";s:1:"1";s:13:"article_order";s:1:"4";s:6:"column";s:1:"1";}s:8:"category";a:6:{s:17:"articles_per_page";s:1:"5";s:18:"article_characters";s:3:"100";s:20:"featured_image_width";s:3:"270";s:21:"featured_image_height";s:3:"270";s:17:"virtual_directory";s:1:"0";s:22:"virtual_directory_name";s:4:"blog";}s:7:"article";a:12:{s:10:"url_suffix";s:5:".html";s:11:"author_name";s:1:"1";s:4:"date";s:1:"1";s:11:"last_update";s:1:"1";s:8:"category";s:2:"on";s:7:"comment";s:2:"on";s:15:"related_article";s:1:"1";s:20:"featured_image_width";s:3:"270";s:21:"featured_image_height";s:3:"270";s:12:"social_media";s:1:"1";s:17:"add_analytic_code";s:0:"";s:20:"add_this_custom_code";s:0:"";}s:7:"comment";a:10:{s:6:"status";s:1:"1";s:16:"comment_per_page";s:1:"6";s:11:"avatar_size";s:2:"60";s:13:"min_character";s:2:"25";s:13:"max_character";s:4:"1500";s:13:"comment_order";s:17:"date_created_desc";s:18:"email_notification";s:0:"";s:7:"captcha";s:1:"3";s:13:"guest_comment";s:1:"1";s:12:"auto_approve";s:1:"0";}s:6:"search";a:6:{s:6:"status";s:1:"1";s:11:"author_name";s:2:"on";s:4:"date";s:2:"on";s:14:"search_display";s:12:"compact_list";s:13:"search_result";s:1:"6";s:14:"result_per_row";s:1:"6";}s:4:"feed";a:2:{s:6:"status";s:1:"0";s:5:"limit";s:3:"500";}s:7:"sitemap";a:2:{s:6:"status";s:1:"0";s:5:"limit";s:4:"1000";}s:5:"admin";a:1:{s:17:"articles_per_page";s:2:"40";}}', 1),
-(3098, 0, 'config', 'config_smtp_username', '', 0),
-(3097, 0, 'config', 'config_smtp_host', '', 0),
 (2022, 0, 'kuler_filter', 'tab', '#tab-module-1', 0),
-(3220, 0, 'kuler_tabs', 'kuler_tabs_module', 'a:2:{i:1;a:8:{s:6:"status";s:1:"1";s:10:"show_title";s:1:"0";s:12:"module_title";a:2:{i:1;s:9:"Home Tabs";i:2;s:9:"Home Tabs";}s:9:"shortcode";s:22:"[kuler_tabs home_tabs]";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"1";s:4:"tabs";a:4:{i:1;a:17:{s:9:"tab_title";a:2:{i:1;s:17:"FEATURED PRODUCTS";i:2;s:17:"FEATURED PRODUCTS";}s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"76";s:8:"products";s:14:"97,86,89,88,61";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"344";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"0";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}i:2;a:17:{s:9:"tab_title";a:2:{i:1;s:11:"NEW PRODUCT";i:2;s:11:"NEW PRODUCT";}s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"67";s:8:"products";s:16:"68,109,67,70,108";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"350";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"0";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}i:3;a:17:{s:9:"tab_title";a:2:{i:1;s:16:"ANOTHER CATEGORY";i:2;s:16:"ANOTHER CATEGORY";}s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"67";s:8:"products";s:14:"55,58,56,59,51";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"350";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"0";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}i:4;a:17:{s:9:"tab_title";a:2:{i:1;s:16:"ANOTHER CATEGORY";i:2;s:16:"ANOTHER CATEGORY";}s:8:"tab_type";s:8:"category";s:11:"category_id";s:2:"67";s:8:"products";s:0:"";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"155";s:12:"image_height";s:3:"155";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"1";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}}}i:2;a:8:{s:6:"status";s:1:"0";s:10:"show_title";s:1:"0";s:12:"module_title";a:2:{i:1;s:10:"SALE ITEMS";i:2;s:10:"SALE ITEMS";}s:9:"shortcode";s:23:"[kuler_tabs sale_items]";s:9:"layout_id";s:2:"-1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:0:"";s:4:"tabs";a:1:{i:1;a:17:{s:9:"tab_title";a:2:{i:1;s:0:"";i:2;s:0:"";}s:8:"tab_type";s:8:"category";s:11:"category_id";s:2:"80";s:8:"products";s:0:"";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"3";s:11:"image_width";s:3:"100";s:12:"image_height";s:3:"100";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"0";s:11:"description";s:1:"0";s:3:"add";s:1:"0";s:8:"wishlist";s:1:"0";s:7:"compare";s:1:"0";s:17:"description_limit";s:0:"";}}}}', 1),
-(3086, 0, 'config', 'config_image_wishlist_height', '115', 0),
-(3096, 0, 'config', 'config_mail_parameter', '', 0),
-(3095, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(3094, 0, 'config', 'config_ftp_status', '0', 0),
-(3093, 0, 'config', 'config_ftp_root', '', 0),
-(3092, 0, 'config', 'config_ftp_password', '', 0),
-(3091, 0, 'config', 'config_ftp_username', '', 0),
-(3090, 0, 'config', 'config_ftp_port', '21', 0),
-(3089, 0, 'config', 'config_ftp_host', 'demo.kulerthemes.com', 0),
-(3088, 0, 'config', 'config_image_cart_height', '115', 0),
-(3087, 0, 'config', 'config_image_cart_width', '90', 0),
-(3085, 0, 'config', 'config_image_wishlist_width', '90', 0),
-(3084, 0, 'config', 'config_image_compare_height', '115', 0),
-(3083, 0, 'config', 'config_image_compare_width', '90', 0),
-(3082, 0, 'config', 'config_image_related_height', '344', 0),
-(3081, 0, 'config', 'config_image_related_width', '270', 0),
-(3080, 0, 'config', 'config_image_additional_height', '94', 0),
-(3078, 0, 'config', 'config_image_product_height', '344', 0),
-(3079, 0, 'config', 'config_image_additional_width', '74', 0),
-(3077, 0, 'config', 'config_image_product_width', '270', 0),
+(3664, 0, 'kuler_tabs', 'kuler_tabs_module', 'a:2:{i:1;a:8:{s:6:"status";s:1:"1";s:10:"show_title";s:1:"0";s:12:"module_title";a:2:{i:1;s:9:"Home Tabs";i:2;s:9:"Home Tabs";}s:9:"shortcode";s:22:"[kuler_tabs home_tabs]";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"1";s:4:"tabs";a:4:{i:1;a:17:{s:9:"tab_title";a:2:{i:1;s:17:"FEATURED PRODUCTS";i:2;s:17:"FEATURED PRODUCTS";}s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"76";s:8:"products";s:14:"97,86,89,88,61";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"344";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"0";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}i:2;a:17:{s:9:"tab_title";a:2:{i:1;s:11:"NEW PRODUCT";i:2;s:11:"NEW PRODUCT";}s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"67";s:8:"products";s:16:"68,109,67,70,108";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"350";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"0";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}i:3;a:17:{s:9:"tab_title";a:2:{i:1;s:16:"ANOTHER CATEGORY";i:2;s:16:"ANOTHER CATEGORY";}s:8:"tab_type";s:7:"product";s:11:"category_id";s:2:"67";s:8:"products";s:14:"55,58,56,59,51";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"350";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"0";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}i:4;a:17:{s:9:"tab_title";a:2:{i:1;s:16:"ANOTHER CATEGORY";i:2;s:16:"ANOTHER CATEGORY";}s:8:"tab_type";s:8:"category";s:11:"category_id";s:2:"67";s:8:"products";s:0:"";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"5";s:11:"image_width";s:3:"155";s:12:"image_height";s:3:"155";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:11:"description";s:1:"1";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:17:"description_limit";s:0:"";}}}i:2;a:8:{s:6:"status";s:1:"0";s:10:"show_title";s:1:"1";s:12:"module_title";a:2:{i:1;s:10:"SALE ITEMS";i:2;s:10:"SALE ITEMS";}s:9:"shortcode";s:23:"[kuler_tabs sale_items]";s:9:"layout_id";s:2:"-1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:0:"";s:4:"tabs";a:1:{i:1;a:17:{s:9:"tab_title";a:2:{i:1;s:0:"";i:2;s:0:"";}s:8:"tab_type";s:8:"category";s:11:"category_id";s:2:"80";s:8:"products";s:0:"";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:5:"limit";s:1:"3";s:11:"image_width";s:3:"100";s:12:"image_height";s:3:"100";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"0";s:11:"description";s:1:"0";s:3:"add";s:1:"0";s:8:"wishlist";s:1:"0";s:7:"compare";s:1:"0";s:17:"description_limit";s:0:"";}}}}', 1),
 (3186, 0, 'kbm_mod_recent_article', 'kbm_mod_recent_article_module', 'a:2:{i:0;a:12:{s:6:"status";s:1:"1";s:10:"show_title";s:1:"1";s:5:"title";a:2:{i:1;s:13:"FROM THE BLOG";i:2;s:13:"FROM THE BLOG";}s:9:"layout_id";s:2:"12";s:8:"position";s:11:"column_left";s:10:"sort_order";s:1:"2";s:22:"product_featured_image";s:1:"1";s:19:"product_description";s:1:"0";s:13:"article_limit";s:1:"5";s:17:"description_limit";s:3:"100";s:20:"featured_image_width";s:3:"100";s:21:"featured_image_height";s:3:"100";}i:2;a:12:{s:6:"status";s:1:"1";s:10:"show_title";s:1:"1";s:5:"title";a:2:{i:1;s:15:"Recent Articles";i:2;s:15:"Recent Articles";}s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:10:"sort_order";s:1:"2";s:22:"product_featured_image";s:1:"1";s:19:"product_description";s:1:"1";s:13:"article_limit";s:1:"4";s:17:"description_limit";s:3:"100";s:20:"featured_image_width";s:3:"170";s:21:"featured_image_height";s:3:"126";}}', 1),
-(3076, 0, 'config', 'config_image_popup_height', '1110', 0),
-(3074, 0, 'config', 'config_image_thumb_height', '638', 0),
-(3217, 0, 'kuler_advanced_html', 'kuler_advanced_html_widgets', 'a:0:{}', 1),
-(3216, 0, 'kuler_advanced_html', 'kuler_advanced_html_module', 'a:1:{i:0;a:24:{s:6:"status";s:1:"1";s:9:"showtitle";s:1:"0";s:5:"title";a:2:{i:1;s:12:"Top banner 2";i:2;s:12:"Top banner 2";}s:11:"module_type";s:8:"standard";s:15:"widget_position";s:4:"left";s:11:"widget_type";s:4:"html";s:11:"widget_icon";s:0:"";s:17:"widget_icon_color";s:0:"";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"1";s:11:"description";a:2:{i:1;s:1027:"&lt;div class=&quot;container banners2&quot;&gt;\r\n&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-8&quot;&gt;\r\n&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-12&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/baby1.png&quot; style=&quot;width: 738px; height: 236px; float: left;&quot; /&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-6&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/baby-2.png&quot; style=&quot;width: 363px; height: 237px;&quot; /&gt;&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-md-6&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/Baby-3.png&quot; style=&quot;width: 357px; height: 237px;&quot; /&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-md-4&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/baby4.png&quot; style=&quot;width: 363px; height: 483px;&quot; /&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";i:2;s:114:"&lt;ul&gt;\r\n	&lt;li&gt;+1.3333.9999&lt;/li&gt;\r\n	&lt;li&gt;Free Ship On Order Over $2000&lt;/li&gt;\r\n&lt;/ul&gt;\r\n";}s:7:"product";s:0:"";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:19:"product_description";s:1:"1";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:11:"image_width";s:2:"80";s:12:"image_height";s:2:"80";s:16:"description_text";s:3:"100";s:12:"module_index";i:1;}}', 1),
-(3166, 0, 'kuler_testimonial', 'kuler_testimonial_module', 'a:1:{i:0;a:15:{s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:10:"sort_order";s:1:"1";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:9:"auto_play";s:1:"1";s:4:"mode";s:10:"horizontal";s:21:"testimonials_per_view";s:1:"1";s:12:"testimonials";a:1:{i:0;a:6:{s:6:"active";s:4:"true";s:9:"$$hashKey";s:3:"013";s:11:"writer_name";a:1:{s:2:"en";s:8:"JANE DOE";}s:12:"writer_image";s:0:"";s:23:"testimonial_information";a:1:{s:2:"en";s:0:"";}s:11:"testimonial";a:1:{s:2:"en";s:274:"&lt;span style=&quot;color:#FFFFFF;&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/span&gt;";}}}s:9:"mainTitle";s:22:"WHAT OUR CUSTOMERS SAY";s:5:"title";a:2:{s:2:"en";s:22:"WHAT OUR CUSTOMERS SAY";s:2:"ar";s:22:"WHAT OUR CUSTOMERS SAY";}s:6:"active";s:4:"true";s:10:"short_code";s:42:"[kuler_testimonial what_our_customers_say]";s:9:"$$hashKey";s:3:"007";s:9:"css_class";s:20:"parallax_testimonial";}}', 1),
-(3075, 0, 'config', 'config_image_popup_width', '870', 0),
-(3072, 0, 'config', 'config_image_category_height', '300', 0),
-(3073, 0, 'config', 'config_image_thumb_width', '500', 0),
-(3071, 0, 'config', 'config_image_category_width', '870', 0),
-(3070, 0, 'config', 'config_icon', 'data/cart.png', 0),
-(3069, 0, 'config', 'config_logo', 'data/logo.png', 0),
-(3068, 0, 'config', 'config_return_status_id', '2', 0),
-(3067, 0, 'config', 'config_return_id', '0', 0),
-(3066, 0, 'config', 'config_commission', '5', 0),
-(3065, 0, 'config', 'config_affiliate_id', '4', 0),
-(3064, 0, 'config', 'config_stock_status_id', '5', 0),
-(3063, 0, 'config', 'config_stock_checkout', '0', 0),
-(3062, 0, 'config', 'config_stock_warning', '0', 0),
-(3061, 0, 'config', 'config_stock_display', '0', 0),
-(3060, 0, 'config', 'config_complete_status_id', '5', 0),
-(3059, 0, 'config', 'config_order_status_id', '1', 0),
-(3058, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
-(3057, 0, 'config', 'config_order_edit', '100', 0),
-(3056, 0, 'config', 'config_checkout_id', '5', 0),
-(3055, 0, 'config', 'config_guest_checkout', '1', 0),
-(3054, 0, 'config', 'config_cart_weight', '1', 0),
-(3053, 0, 'config', 'config_account_id', '3', 0),
-(3052, 0, 'config', 'config_customer_price', '0', 0),
+(3515, 0, 'config', 'config_ftp_status', '0', 0),
+(3516, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(3517, 0, 'config', 'config_mail_parameter', '', 0),
+(3518, 0, 'config', 'config_smtp_host', '', 0),
+(3519, 0, 'config', 'config_smtp_username', '', 0),
+(3520, 0, 'config', 'config_smtp_password', '', 0),
+(3521, 0, 'config', 'config_smtp_port', '25', 0),
+(3522, 0, 'config', 'config_smtp_timeout', '5', 0),
+(3523, 0, 'config', 'config_alert_mail', '0', 0),
+(3524, 0, 'config', 'config_account_mail', '0', 0),
+(3525, 0, 'config', 'config_alert_emails', '', 0),
+(3526, 0, 'config', 'config_fraud_detection', '0', 0),
+(3527, 0, 'config', 'config_fraud_key', '', 0),
+(3528, 0, 'config', 'config_fraud_score', '', 0),
+(3529, 0, 'config', 'config_fraud_status_id', '7', 0),
+(3530, 0, 'config', 'config_secure', '0', 0),
+(3531, 0, 'config', 'config_shared', '0', 0),
+(3532, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(3501, 0, 'config', 'config_image_additional_height', '94', 0),
+(3502, 0, 'config', 'config_image_related_width', '270', 0),
+(3503, 0, 'config', 'config_image_related_height', '344', 0),
+(3504, 0, 'config', 'config_image_compare_width', '90', 0),
+(3505, 0, 'config', 'config_image_compare_height', '115', 0),
+(3506, 0, 'config', 'config_image_wishlist_width', '90', 0),
+(3507, 0, 'config', 'config_image_wishlist_height', '115', 0),
+(3508, 0, 'config', 'config_image_cart_width', '90', 0),
+(3509, 0, 'config', 'config_image_cart_height', '115', 0),
+(3510, 0, 'config', 'config_ftp_host', 'demo.kulerthemes.com', 0),
+(3511, 0, 'config', 'config_ftp_port', '21', 0),
+(3512, 0, 'config', 'config_ftp_username', '', 0),
+(3513, 0, 'config', 'config_ftp_password', '', 0),
+(3707, 0, 'kuler_advanced_html', 'kuler_advanced_html_module', 'a:2:{i:0;a:24:{s:6:"status";s:1:"1";s:9:"showtitle";s:1:"0";s:5:"title";a:2:{i:1;s:12:"Top banner 2";i:2;s:12:"Top banner 2";}s:11:"module_type";s:8:"standard";s:15:"widget_position";s:4:"left";s:11:"widget_type";s:4:"html";s:11:"widget_icon";s:0:"";s:17:"widget_icon_color";s:0:"";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:10:"sort_order";s:1:"1";s:11:"description";a:2:{i:1;s:1027:"&lt;div class=&quot;container banners2&quot;&gt;\r\n&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-8&quot;&gt;\r\n&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-12&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/baby1.png&quot; style=&quot;width: 738px; height: 236px; float: left;&quot; /&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-6&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/baby-2.png&quot; style=&quot;width: 363px; height: 237px;&quot; /&gt;&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-md-6&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/Baby-3.png&quot; style=&quot;width: 357px; height: 237px;&quot; /&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-md-4&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://bling.local/image/data/baby4.png&quot; style=&quot;width: 363px; height: 483px;&quot; /&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";i:2;s:114:"&lt;ul&gt;\r\n	&lt;li&gt;+1.3333.9999&lt;/li&gt;\r\n	&lt;li&gt;Free Ship On Order Over $2000&lt;/li&gt;\r\n&lt;/ul&gt;\r\n";}s:7:"product";s:0:"";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:19:"product_description";s:1:"1";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:11:"image_width";s:2:"80";s:12:"image_height";s:2:"80";s:16:"description_text";s:3:"100";s:12:"module_index";i:1;}i:1;a:24:{s:6:"status";s:1:"1";s:9:"showtitle";s:1:"0";s:5:"title";a:2:{i:1;s:0:"";i:2;s:0:"";}s:11:"module_type";s:8:"standard";s:15:"widget_position";s:4:"left";s:11:"widget_type";s:4:"html";s:11:"widget_icon";s:0:"";s:17:"widget_icon_color";s:0:"";s:9:"layout_id";s:2:"-1";s:8:"position";s:17:"header_extra_info";s:10:"sort_order";s:0:"";s:11:"description";a:2:{i:1;s:114:"&lt;ul&gt;\r\n	&lt;li&gt;+1.3333.9999&lt;/li&gt;\r\n	&lt;li&gt;Free Ship On Order Over $2000&lt;/li&gt;\r\n&lt;/ul&gt;\r\n";i:2;s:66:"&lt;p&gt;123.456.7890 free shipping on orders over $50&lt;/p&gt;\r\n";}s:7:"product";s:0:"";s:4:"name";s:1:"1";s:5:"price";s:1:"1";s:6:"rating";s:1:"1";s:19:"product_description";s:1:"1";s:3:"add";s:1:"1";s:8:"wishlist";s:1:"1";s:7:"compare";s:1:"1";s:11:"image_width";s:2:"80";s:12:"image_height";s:2:"80";s:16:"description_text";s:3:"100";s:12:"module_index";i:2;}}', 1),
+(3708, 0, 'kuler_advanced_html', 'kuler_advanced_html_widgets', 'a:0:{}', 1),
+(3234, 0, 'kuler_testimonial', 'kuler_testimonial_module', 'a:1:{i:0;a:15:{s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:10:"sort_order";s:1:"1";s:10:"show_title";s:1:"1";s:6:"status";s:1:"1";s:9:"auto_play";s:1:"1";s:4:"mode";s:10:"horizontal";s:21:"testimonials_per_view";s:1:"1";s:12:"testimonials";a:1:{i:0;a:6:{s:6:"active";s:4:"true";s:9:"$$hashKey";s:3:"013";s:11:"writer_name";a:1:{s:2:"en";s:8:"JANE DOE";}s:12:"writer_image";s:0:"";s:23:"testimonial_information";a:1:{s:2:"en";s:0:"";}s:11:"testimonial";a:1:{s:2:"en";s:274:"&lt;span style=&quot;color:#FFFFFF;&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/span&gt;";}}}s:9:"mainTitle";s:22:"WHAT OUR CUSTOMERS SAY";s:5:"title";a:2:{s:2:"en";s:22:"WHAT OUR CUSTOMERS SAY";s:2:"ar";s:22:"WHAT OUR CUSTOMERS SAY";}s:6:"active";s:4:"true";s:10:"short_code";s:42:"[kuler_testimonial what_our_customers_say]";s:9:"$$hashKey";s:3:"007";s:9:"css_class";s:20:"parallax_testimonial";}}', 1),
+(3514, 0, 'config', 'config_ftp_root', '', 0),
+(3500, 0, 'config', 'config_image_additional_width', '74', 0),
+(3499, 0, 'config', 'config_image_product_height', '344', 0),
+(3498, 0, 'config', 'config_image_product_width', '270', 0),
+(3497, 0, 'config', 'config_image_popup_height', '1110', 0),
+(3494, 0, 'config', 'config_image_thumb_width', '500', 0),
+(3495, 0, 'config', 'config_image_thumb_height', '638', 0),
+(3496, 0, 'config', 'config_image_popup_width', '870', 0),
+(3493, 0, 'config', 'config_image_category_height', '300', 0),
+(3492, 0, 'config', 'config_image_category_width', '870', 0),
+(3491, 0, 'config', 'config_icon', 'data/cart.png', 0),
+(3490, 0, 'config', 'config_logo', 'data/logo.png', 0),
+(3489, 0, 'config', 'config_return_status_id', '2', 0),
+(3488, 0, 'config', 'config_return_id', '0', 0),
+(3487, 0, 'config', 'config_commission', '5', 0),
+(3486, 0, 'config', 'config_affiliate_id', '4', 0),
+(3485, 0, 'config', 'config_stock_status_id', '5', 0),
+(3484, 0, 'config', 'config_stock_checkout', '0', 0),
+(3483, 0, 'config', 'config_stock_warning', '0', 0),
+(3482, 0, 'config', 'config_stock_display', '0', 0),
+(3481, 0, 'config', 'config_complete_status_id', '5', 0),
+(3480, 0, 'config', 'config_order_status_id', '1', 0),
+(3479, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
+(3478, 0, 'config', 'config_order_edit', '100', 0),
+(3477, 0, 'config', 'config_checkout_id', '5', 0),
 (2913, 0, 'kuler_demo_builder', 'kuler_demo_builder', 'a:1:{s:10:"quickstart";a:3:{s:14:"excluded_items";s:263:"config.php\nadmin/config.php\nquickstart.zip\nadmin/controller/module/kuler_demo_builder.php\nadmin/language/english/module/kuler_demo_builder.php\nadmin/model/kuler/demo_builder.php\nadmin/view/kuler/js/demo_builder.js\nadmin/view/template/module/kuler_demo_builder.tpl";s:13:"mapping_items";s:65:"config-dist.php=config.php\nadmin/config-dist.php=admin/config.php";s:18:"image_placeholders";s:23:"yfsdfsdfsdf=yfsdfsdfsdf";}}', 1),
-(3050, 0, 'config', 'config_customer_group_id', '1', 0),
-(3051, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:"1";}', 1),
-(3049, 0, 'config', 'config_customer_online', '0', 0),
-(3041, 0, 'config', 'config_review_status', '1', 0),
-(3130, 0, 'kuler_menu', 'kuler_menu_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:2:"-1";s:8:"position";s:4:"menu";s:10:"sort_order";s:1:"1";s:6:"status";s:1:"1";}}', 1),
-(3129, 0, 'kuler_menu', 'kuler_menu', 'a:5:{i:0;a:16:{s:6:"status";s:1:"1";s:5:"title";a:1:{i:1;s:4:"SHOP";}s:10:"sort_order";s:1:"2";s:4:"type";s:8:"category";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:5:"image";s:1:"1";s:14:"image_position";s:10:"float-left";s:11:"description";s:1:"1";s:19:"show_sub_categories";s:1:"1";s:16:"description_text";s:3:"100";s:20:"category_image_width";s:2:"90";s:21:"category_image_height";s:2:"90";s:21:"max_subcategory_items";s:1:"3";s:10:"categories";a:8:{i:0;a:2:{s:11:"category_id";s:2:"59";s:4:"name";s:13:"MEN’S SHIRT";}i:1;a:2:{s:11:"category_id";s:2:"63";s:4:"name";s:13:"MEN’S PANTS";}i:2;a:2:{s:11:"category_id";s:2:"67";s:4:"name";s:19:"MEN’S ACCESSORIES";}i:3;a:2:{s:11:"category_id";s:2:"72";s:4:"name";s:13:"MEN’S SHOES";}i:4;a:2:{s:11:"category_id";s:2:"76";s:4:"name";s:13:"WOMEN’S TOP";}i:5;a:2:{s:11:"category_id";s:2:"80";s:4:"name";s:16:"WOMEN’S BOTTOM";}i:6;a:2:{s:11:"category_id";s:2:"84";s:4:"name";s:21:"WOMEN’S ACCESSORIES";}i:7;a:2:{s:11:"category_id";s:2:"89";s:4:"name";s:15:"WOMEN’S SHOES";}}}i:1;a:8:{s:6:"status";s:1:"1";s:5:"title";a:1:{i:1;s:11:"BOW BUILDER";}s:10:"sort_order";s:1:"3";s:4:"type";s:4:"html";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:5:"htmls";a:1:{i:1;s:1011:"&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-6&quot;&gt;\r\n&lt;style type=&quot;text/css&quot;&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }\r\n&lt;/style&gt;\r\n&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; mozallowfullscreen=&quot;&quot; src=&quot;http://player.vimeo.com/video/26017275&quot; webkitallowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-md-6&quot;&gt;\r\n&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; mozallowfullscreen=&quot;&quot; src=&quot;http://player.vimeo.com/video/51094481&quot; webkitallowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}}i:2;a:8:{s:6:"status";s:1:"1";s:5:"title";a:1:{i:1;s:22:"SALES &amp; DISCOUNTED";}s:10:"sort_order";s:1:"4";s:4:"type";s:6:"custom";s:16:"enable_hyperlink";s:1:"1";s:4:"link";s:44:"http://www.kulerthemes.com/theme/start-theme";s:7:"new_tab";s:1:"0";s:11:"sub_new_tab";s:1:"0";}i:3;a:9:{s:6:"status";s:1:"1";s:5:"title";a:1:{i:1;s:8:"ABOUT US";}s:10:"sort_order";s:1:"5";s:4:"type";s:6:"custom";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:11:"sub_new_tab";s:1:"0";s:5:"links";a:6:{i:0;a:2:{s:6:"titles";a:1:{i:1;s:19:"Easy to get started";}s:4:"link";s:92:"http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_article_id=17";}i:1;a:2:{s:6:"titles";a:1:{i:1;s:10:"11 Modules";}s:4:"link";s:107:"http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_path=4&amp;kbm_article_id=18";}i:2;a:2:{s:6:"titles";a:1:{i:1;s:17:"One-page checkout";}s:4:"link";s:107:"http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_path=4&amp;kbm_article_id=19";}i:3;a:2:{s:6:"titles";a:1:{i:1;s:25:"Light style customization";}s:4:"link";s:214:"http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_path=4&amp;kbm_article_id=20http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_path=4&amp;kbm_article_id=20";}i:4;a:2:{s:6:"titles";a:1:{i:1;s:22:"Powerful control panel";}s:4:"link";s:107:"http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_path=4&amp;kbm_article_id=21";}i:5;a:2:{s:6:"titles";a:1:{i:1;s:10:"Responsive";}s:4:"link";s:107:"http://demo.kulerthemes.com/start/1/index.php?route=module/kbm/article&amp;kbm_path=4&amp;kbm_article_id=22";}}}i:4;a:15:{s:6:"status";s:1:"1";s:5:"title";a:1:{i:1;s:7:"CONNECT";}s:10:"sort_order";s:1:"6";s:4:"type";s:8:"category";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:5:"image";s:1:"1";s:14:"image_position";s:10:"float-left";s:11:"description";s:1:"1";s:19:"show_sub_categories";s:1:"1";s:16:"description_text";s:3:"100";s:20:"category_image_width";s:2:"80";s:21:"category_image_height";s:2:"80";s:21:"max_subcategory_items";s:0:"";}}', 1),
-(3042, 0, 'config', 'config_download', '1', 0),
-(3043, 0, 'config', 'config_voucher_min', '1', 0),
-(3044, 0, 'config', 'config_voucher_max', '1000', 0),
-(3045, 0, 'config', 'config_tax', '1', 0),
-(3046, 0, 'config', 'config_vat', '0', 0),
-(3047, 0, 'config', 'config_tax_default', 'shipping', 0),
-(3048, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(3040, 0, 'config', 'config_product_count', '1', 0),
-(3039, 0, 'config', 'config_admin_limit', '20', 0),
-(3038, 0, 'config', 'config_catalog_limit', '15', 0),
-(3037, 0, 'config', 'config_weight_class_id', '1', 0),
-(3036, 0, 'config', 'config_length_class_id', '1', 0),
-(3020, 0, 'config', 'config_name', 'Start OpenCart Theme', 0),
-(3021, 0, 'config', 'config_owner', 'KulerThemes', 0),
-(3022, 0, 'config', 'config_address', '198  West 21th Street, Suite 721\r\nNew York, NY 10010\r\nEmail: youremail@yourdomain.com\r\nFax: +88 (0) 202 0000 001', 0),
-(3023, 0, 'config', 'config_email', 'celso@lamrock.com', 0),
-(3024, 0, 'config', 'config_telephone', '+88 (0) 101 0000 000', 0),
-(3025, 0, 'config', 'config_fax', '', 0),
-(3026, 0, 'config', 'config_title', 'Start', 0),
-(3027, 0, 'config', 'config_meta_description', 'KulerThemes', 0),
-(3028, 0, 'config', 'config_template', 'start', 0),
-(3029, 0, 'config', 'config_layout_id', '4', 0),
-(3030, 0, 'config', 'config_country_id', '222', 0),
-(3031, 0, 'config', 'config_zone_id', '3563', 0),
-(3032, 0, 'config', 'config_language', 'en', 0),
-(3033, 0, 'config', 'config_admin_language', 'en', 0),
-(3034, 0, 'config', 'config_currency', 'USD', 0),
-(3035, 0, 'config', 'config_currency_auto', '1', 0);
+(3476, 0, 'config', 'config_guest_checkout', '1', 0),
+(3475, 0, 'config', 'config_cart_weight', '1', 0),
+(3474, 0, 'config', 'config_account_id', '3', 0),
+(3473, 0, 'config', 'config_customer_price', '0', 0),
+(3471, 0, 'config', 'config_customer_group_id', '1', 0),
+(3696, 0, 'kuler_menu', 'kuler_menu_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:2:"-1";s:8:"position";s:4:"menu";s:10:"sort_order";s:1:"1";s:6:"status";s:1:"1";}}', 1),
+(3695, 0, 'kuler_menu', 'kuler_menu', 'a:5:{i:0;a:15:{s:6:"status";s:1:"1";s:5:"title";a:2:{i:1;s:4:"SHOP";i:2;s:4:"SHOP";}s:10:"sort_order";s:1:"2";s:4:"type";s:8:"category";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:5:"image";s:1:"1";s:14:"image_position";s:10:"float-left";s:11:"description";s:1:"1";s:19:"show_sub_categories";s:1:"1";s:16:"description_text";s:3:"100";s:20:"category_image_width";s:2:"90";s:21:"category_image_height";s:2:"90";s:21:"max_subcategory_items";s:1:"3";}i:1;a:8:{s:6:"status";s:1:"1";s:5:"title";a:2:{i:1;s:11:"BOW BUILDER";i:2;s:11:"BOW BUILDER";}s:10:"sort_order";s:1:"3";s:4:"type";s:4:"html";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:5:"htmls";a:2:{i:1;s:0:"";i:2;s:1011:"&lt;div class=&quot;row&quot;&gt;\r\n&lt;div class=&quot;col-md-6&quot;&gt;\r\n&lt;style type=&quot;text/css&quot;&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }\r\n&lt;/style&gt;\r\n&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; mozallowfullscreen=&quot;&quot; src=&quot;http://player.vimeo.com/video/26017275&quot; webkitallowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-md-6&quot;&gt;\r\n&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; mozallowfullscreen=&quot;&quot; src=&quot;http://player.vimeo.com/video/51094481&quot; webkitallowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n";}}i:2;a:8:{s:6:"status";s:1:"1";s:5:"title";a:2:{i:1;s:22:"SALES &amp; DISCOUNTED";i:2;s:22:"SALES &amp; DISCOUNTED";}s:10:"sort_order";s:1:"4";s:4:"type";s:6:"custom";s:16:"enable_hyperlink";s:1:"1";s:4:"link";s:44:"http://www.kulerthemes.com/theme/start-theme";s:7:"new_tab";s:1:"0";s:11:"sub_new_tab";s:1:"0";}i:3;a:8:{s:6:"status";s:1:"1";s:5:"title";a:2:{i:1;s:8:"ABOUT US";i:2;s:8:"ABOUT US";}s:10:"sort_order";s:1:"5";s:4:"type";s:6:"custom";s:16:"enable_hyperlink";s:1:"1";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:11:"sub_new_tab";s:1:"0";}i:4;a:15:{s:6:"status";s:1:"1";s:5:"title";a:2:{i:1;s:7:"CONNECT";i:2;s:7:"CONNECT";}s:10:"sort_order";s:1:"6";s:4:"type";s:8:"category";s:16:"enable_hyperlink";s:1:"0";s:4:"link";s:0:"";s:7:"new_tab";s:1:"1";s:5:"image";s:1:"1";s:14:"image_position";s:10:"float-left";s:11:"description";s:1:"1";s:19:"show_sub_categories";s:1:"1";s:16:"description_text";s:3:"100";s:20:"category_image_width";s:2:"80";s:21:"category_image_height";s:2:"80";s:21:"max_subcategory_items";s:0:"";}}', 1),
+(3472, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:"1";}', 1),
+(3470, 0, 'config', 'config_customer_online', '0', 0),
+(3467, 0, 'config', 'config_vat', '0', 0),
+(3468, 0, 'config', 'config_tax_default', 'shipping', 0),
+(3469, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(3466, 0, 'config', 'config_tax', '1', 0),
+(3464, 0, 'config', 'config_voucher_min', '1', 0),
+(3465, 0, 'config', 'config_voucher_max', '1000', 0),
+(3463, 0, 'config', 'config_download', '1', 0),
+(3462, 0, 'config', 'config_review_status', '1', 0),
+(3461, 0, 'config', 'config_product_count', '1', 0),
+(3460, 0, 'config', 'config_admin_limit', '20', 0),
+(3459, 0, 'config', 'config_catalog_limit', '15', 0),
+(3458, 0, 'config', 'config_weight_class_id', '1', 0),
+(3457, 0, 'config', 'config_length_class_id', '1', 0),
+(3456, 0, 'config', 'config_currency_auto', '1', 0),
+(3455, 0, 'config', 'config_currency', 'USD', 0),
+(3454, 0, 'config', 'config_admin_language', 'en', 0),
+(3453, 0, 'config', 'config_language', 'en', 0),
+(3452, 0, 'config', 'config_zone_id', '3563', 0),
+(3451, 0, 'config', 'config_country_id', '222', 0),
+(3448, 0, 'config', 'config_meta_description', 'Baby Bling Bows', 0),
+(3449, 0, 'config', 'config_template', 'start', 0),
+(3450, 0, 'config', 'config_layout_id', '4', 0),
+(3447, 0, 'config', 'config_title', 'Baby Bling Bows', 0),
+(3446, 0, 'config', 'config_fax', '', 0),
+(3445, 0, 'config', 'config_telephone', '+88 (0) 101 0000 000', 0),
+(3444, 0, 'config', 'config_email', 'admin@babyblingbows.com', 0),
+(3443, 0, 'config', 'config_address', '198  West 21th Street, Suite 721\r\nNew York, NY 10010\r\nEmail: youremail@yourdomain.com\r\nFax: +88 (0) 202 0000 001', 0),
+(3442, 0, 'config', 'config_owner', 'Baby Bling Bows', 0),
+(3441, 0, 'config', 'config_name', 'Baby Bling Bows', 0);
 
 -- --------------------------------------------------------
 
@@ -4737,6 +4858,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 -- Table structure for table `oc_stock_status`
 --
 
+DROP TABLE IF EXISTS `oc_stock_status`;
 CREATE TABLE IF NOT EXISTS `oc_stock_status` (
   `stock_status_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
@@ -4764,6 +4886,7 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 -- Table structure for table `oc_store`
 --
 
+DROP TABLE IF EXISTS `oc_store`;
 CREATE TABLE IF NOT EXISTS `oc_store` (
   `store_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -4778,6 +4901,7 @@ CREATE TABLE IF NOT EXISTS `oc_store` (
 -- Table structure for table `oc_tax_class`
 --
 
+DROP TABLE IF EXISTS `oc_tax_class`;
 CREATE TABLE IF NOT EXISTS `oc_tax_class` (
   `tax_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(32) NOT NULL,
@@ -4801,6 +4925,7 @@ INSERT INTO `oc_tax_class` (`tax_class_id`, `title`, `description`, `date_added`
 -- Table structure for table `oc_tax_rate`
 --
 
+DROP TABLE IF EXISTS `oc_tax_rate`;
 CREATE TABLE IF NOT EXISTS `oc_tax_rate` (
   `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT,
   `geo_zone_id` int(11) NOT NULL DEFAULT '0',
@@ -4826,6 +4951,7 @@ INSERT INTO `oc_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`,
 -- Table structure for table `oc_tax_rate_to_customer_group`
 --
 
+DROP TABLE IF EXISTS `oc_tax_rate_to_customer_group`;
 CREATE TABLE IF NOT EXISTS `oc_tax_rate_to_customer_group` (
   `tax_rate_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -4846,6 +4972,7 @@ INSERT INTO `oc_tax_rate_to_customer_group` (`tax_rate_id`, `customer_group_id`)
 -- Table structure for table `oc_tax_rule`
 --
 
+DROP TABLE IF EXISTS `oc_tax_rule`;
 CREATE TABLE IF NOT EXISTS `oc_tax_rule` (
   `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT,
   `tax_class_id` int(11) NOT NULL,
@@ -4871,12 +4998,13 @@ INSERT INTO `oc_tax_rule` (`tax_rule_id`, `tax_class_id`, `tax_rate_id`, `based`
 -- Table structure for table `oc_url_alias`
 --
 
+DROP TABLE IF EXISTS `oc_url_alias`;
 CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL,
   PRIMARY KEY (`url_alias_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=773 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=774 ;
 
 --
 -- Dumping data for table `oc_url_alias`
@@ -4884,7 +5012,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (730, 'manufacturer_id=8', 'apple'),
-(772, 'information_id=4', 'about_us'),
+(773, 'information_id=4', 'about_us'),
 (767, 'category_id=34', 'mp3-players'),
 (536, 'category_id=36', 'Normal');
 
@@ -4894,6 +5022,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 -- Table structure for table `oc_user`
 --
 
+DROP TABLE IF EXISTS `oc_user`;
 CREATE TABLE IF NOT EXISTS `oc_user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_group_id` int(11) NOT NULL,
@@ -4924,6 +5053,7 @@ INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt
 -- Table structure for table `oc_user_group`
 --
 
+DROP TABLE IF EXISTS `oc_user_group`;
 CREATE TABLE IF NOT EXISTS `oc_user_group` (
   `user_group_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -4945,6 +5075,7 @@ INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
 -- Table structure for table `oc_voucher`
 --
 
+DROP TABLE IF EXISTS `oc_voucher`;
 CREATE TABLE IF NOT EXISTS `oc_voucher` (
   `voucher_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -4974,6 +5105,7 @@ INSERT INTO `oc_voucher` (`voucher_id`, `order_id`, `code`, `from_name`, `from_e
 -- Table structure for table `oc_voucher_history`
 --
 
+DROP TABLE IF EXISTS `oc_voucher_history`;
 CREATE TABLE IF NOT EXISTS `oc_voucher_history` (
   `voucher_history_id` int(11) NOT NULL AUTO_INCREMENT,
   `voucher_id` int(11) NOT NULL,
@@ -4989,6 +5121,7 @@ CREATE TABLE IF NOT EXISTS `oc_voucher_history` (
 -- Table structure for table `oc_voucher_theme`
 --
 
+DROP TABLE IF EXISTS `oc_voucher_theme`;
 CREATE TABLE IF NOT EXISTS `oc_voucher_theme` (
   `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -5010,6 +5143,7 @@ INSERT INTO `oc_voucher_theme` (`voucher_theme_id`, `image`) VALUES
 -- Table structure for table `oc_voucher_theme_description`
 --
 
+DROP TABLE IF EXISTS `oc_voucher_theme_description`;
 CREATE TABLE IF NOT EXISTS `oc_voucher_theme_description` (
   `voucher_theme_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -5035,6 +5169,7 @@ INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `
 -- Table structure for table `oc_weight_class`
 --
 
+DROP TABLE IF EXISTS `oc_weight_class`;
 CREATE TABLE IF NOT EXISTS `oc_weight_class` (
   `weight_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `value` decimal(15,8) NOT NULL DEFAULT '0.00000000',
@@ -5057,6 +5192,7 @@ INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
 -- Table structure for table `oc_weight_class_description`
 --
 
+DROP TABLE IF EXISTS `oc_weight_class_description`;
 CREATE TABLE IF NOT EXISTS `oc_weight_class_description` (
   `weight_class_id` int(11) NOT NULL AUTO_INCREMENT,
   `language_id` int(11) NOT NULL,
@@ -5085,6 +5221,7 @@ INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `ti
 -- Table structure for table `oc_zone`
 --
 
+DROP TABLE IF EXISTS `oc_zone`;
 CREATE TABLE IF NOT EXISTS `oc_zone` (
   `zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(11) NOT NULL,
@@ -9093,6 +9230,7 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 -- Table structure for table `oc_zone_to_geo_zone`
 --
 
+DROP TABLE IF EXISTS `oc_zone_to_geo_zone`;
 CREATE TABLE IF NOT EXISTS `oc_zone_to_geo_zone` (
   `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(11) NOT NULL,
