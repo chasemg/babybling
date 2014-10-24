@@ -1,11 +1,11 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://bling.local/admin/');
-define('HTTP_CATALOG', 'http://bling.local/');
+define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/admin/');
+define('HTTP_CATALOG', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://bling.local/admin/');
-define('HTTPS_CATALOG', 'http://bling.local/');
+define('HTTPS_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/admin/');
+define('HTTPS_CATALOG', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // DIR
 define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
