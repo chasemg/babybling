@@ -3,3 +3,5 @@
 image/cache/
 system/cache/
 system/logs/
+config.php
+admin/config.php

@@ -173,7 +173,7 @@ legend {
 }
 textarea {
   overflow: auto;
-  width: 100%;
+  width: 96%;
 }
 optgroup {
   font-weight: bold;
@@ -353,8 +353,8 @@ a.button {
 input {
   margin: 0;
   padding: 11px;
-  border: none;
-  background-color: #eee;
+ /* border: medium none;*/
+  /*background-color: #eee;*/
   max-width: 100%;
   vertical-align: top;
 }
@@ -452,8 +452,8 @@ Grid Framework
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 13px;
+  padding-right: 0px;
 }
 .container-fluid {
   margin-right: auto;
@@ -462,14 +462,14 @@ Grid Framework
   padding-right: 15px;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+ /* margin-left: -15px;
+  margin-right: -15px;*/
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -948,7 +948,7 @@ Grid Framework
     float: left;
   }
   .col-lg-12 {
-    width: 100%;
+    width: 90%;
   }
   .col-lg-11 {
     width: 91.66666667%;
@@ -1745,6 +1745,7 @@ Footer
 #footer {
   border-bottom: 1px solid #333333;
   padding-top: 30px;
+  border-top: 1px solid #333333;
 }
 #footer h3 {
   font-size: 16px;
@@ -1752,10 +1753,10 @@ Footer
   margin: 0 0 1rem 0;
 }
 #footer .row .row div[class^="col"] {
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 #footer .info a {
-  background-color: #444;
+  background-color: #f6a2b5;
   padding: 10px 20px;
   display: inline-block;
   text-transform: uppercase;
@@ -1833,7 +1834,7 @@ Social newsletter
 /*general*/
 .social-newsletter {
   padding: 30px 0;
-  border-bottom: 1px solid #333333;
+  /*border-bottom: 1px solid #333333;/*/
 }
 /*social*/
 .social {
@@ -2821,8 +2822,8 @@ Kuler Contact Form
 }
 .kcf-module input,
 .kcf-module textarea {
-  background-color: #ffffff;
-  padding: 10px;
+ /* background-color: #ffffff;*/
+  padding: 10px 140px 10px 10px;
   
 }
 .kcf-module input:focus,
@@ -3016,7 +3017,7 @@ Kuler Tabs
   display: inline-block;
 }
 .kuler-tabs .box-heading li.ui-state-active a {
-  color: #444444;
+  color: #c1df9f;
 }
 .kuler-tabs .box-heading .btn-tabs-toggle {
   top: 0;
@@ -4557,7 +4558,7 @@ Mega Menu
   }
   #megamenu .mainmenu > li {
     position: static;
-	border-right: 2px solid #f1f2f1;
+	border-right: 1px solid #c0c3c1;
 	
   }
   #megamenu .mainmenu > li:last-child
@@ -4623,7 +4624,7 @@ General
     max-width: 1250px;
   }
   .container {
-    max-width: 1200px;
+    max-width: 1212px;
   }
   .breadcrumb {
     text-align: right;
@@ -4759,11 +4760,11 @@ General
     padding: 0;
   }
   #footer h3 {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   #footer .left {
     border-right: 1px solid #333333;
-    padding-top: 50px;
+    padding-top: 10px;
   }
   #footer .left .info {
     position: relative;
@@ -4774,7 +4775,7 @@ General
     position: absolute;
     width: 5000px;
     height: 1px;
-    background-color: #333333;
+   /* background-color: #333333;*/
     bottom: 0;
     right: 0;
   }
@@ -4791,6 +4792,7 @@ General
     margin: 0;
     border-left: 1px solid #333333;
     margin-left: -1px;
+	display:none;
   }
   #footer .left .contact li {
     margin-bottom: 20px;
@@ -4824,7 +4826,7 @@ General
     padding-bottom: 0;
   }
   .social-newsletter {
-    padding: 50px 0;
+    padding: 0;
   }
   .newsletter {
     font-size: 16px;
@@ -5500,5 +5502,33 @@ Style_4
   margin-bottom: 70px;
   padding-bottom: 70px;
   border-bottom: 1px solid #333333;
+}
+
+.facebook
+{
+	height:21px;
+	width:21px;
+	display:inline-block;
+	background: url(../image/facebook.png);
+	padding: 10px;
+    border: 10px solid #f7f8f8;
+}
+.pinterest
+{
+	height:21px;
+	width:21px;
+	display:inline-block;
+	background: url(../image/par.png);
+	padding: 10px;
+    border: 10px solid #f7f8f8;
+}
+.instagram
+{
+	height:21px;
+	width:21px;
+	display:inline-block;
+	background: url(../image/instagram.png);
+	padding: 10px;
+    border: 10px solid #f7f8f8;
 }
 /*# sourceMappingURL=stylesheet.css.map */

@@ -22,7 +22,7 @@ define('DIR_LOGS',DOC_ROOT . '/system/logs/');
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'wh@tAm3$$');
 define('DB_DATABASE', 'bling');
 define('DB_PREFIX', 'oc_');
 ?>

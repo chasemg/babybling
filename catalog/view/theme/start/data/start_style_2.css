@@ -11,25 +11,6 @@
 
 /* Custom Notification */
 
-#notification {
-	top: 80px;
-	z-index: 9999;
-	opacity: 0;
-	right: 20px;
-	width: 300px;
-	position: fixed;
-	visibility: hidden;
-	transition: 0.3s ease-in-out;
-	-moz-transition: 0.3s ease-in-out;
-	-webkit-transition: 0.3s ease-in-out;
-}
-
-#notification.active {
-	top: 20px;
-	opacity: 1;
-	visibility: visible;
-}
-
 
 /* Scroll up */
 
@@ -159,7 +140,7 @@ background:#b4d88b
     
     
     
-        background-color: #f8f8f8;
+        background-color: #dfdfdf;
     
     
     
@@ -193,7 +174,7 @@ h1,h2,h3,h4,h5,h6 {
 
   #top-bar{
   
-    background-color: rgba(246, 246, 246, 0);
+    background-color: rgba(255, 255, 255, 0);
   
   }
 
@@ -201,7 +182,7 @@ h1,h2,h3,h4,h5,h6 {
 
   #top-bar a{
     
-      color: #dadada;
+      color: #c9c7c7;
     
   }
 
@@ -209,7 +190,7 @@ h1,h2,h3,h4,h5,h6 {
 
   #top-bar a:hover{
     
-      color: #eee7e7;
+      color: #c9c7c7;
     
   }
 
@@ -225,7 +206,7 @@ h1,h2,h3,h4,h5,h6 {
 
   #top-bar{
     
-      border-color: #f0f0f0;
+      border-color: #cbcbcb;
     
   }
 
@@ -234,7 +215,7 @@ h1,h2,h3,h4,h5,h6 {
 
   #header{
   
-    background-color: rgba(216, 74, 74, 0);
+    background-color: rgba(141, 103, 103, 0);
   
   }
 
@@ -292,21 +273,25 @@ h1,h2,h3,h4,h5,h6 {
 
     .style_2 .free-ship{
     
-      background-color: #f8f8f8;
+      background-color: #dfdfdf;
     
     }
     .style_2 .product-grid .sale,
     .style_2 .product-list .sale,
     .style_2 .navigation{
-      background-color: #f8f8f8;
+      background-color: #dfdfdf;
     }
 
 
 #menu {
 	
-		font-family: "Varela Round";
+		font-family: VT323;
 	
 	
+		font-weight: normal;
+	
+	
+		font-style: normal;
 	
 	
 }
@@ -314,19 +299,21 @@ h1,h2,h3,h4,h5,h6 {
 
 .mainmenu > li > a {
 	
-	color: #73767a;
+	color: #585454;
 	
+	
+		font-size: 14px;
 	
 }
 
 
 .style_1 #header #cart #cart-total:after,
 .style_1 #header #search .button-search:before{
-  color: #73767a;
+  color: #585454;
 }
 .style_4 #header #cart #cart-total:after,
 .style_4 #header #search .button-search:before{
-color: #73767a;
+color: #585454;
 }
 
 
