@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['HTTP_HOST'] == 'babyblingbows.local')
+if ($_SERVER['HTTP_HOST'] == 'bling.local')
 {
 // HTTP
 define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/');

@@ -311,6 +311,7 @@ select {
 select:focus {
   outline: none;
 }
+
 button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -474,6 +475,7 @@ Grid Framework
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
+
 .col-xs-12 {
   width: 100%;
 }
@@ -950,6 +952,26 @@ Grid Framework
   .col-lg-12 {
     width: 90%;
   }
+  /*.col-lg-12 h3
+  {
+	  display:none;
+  }*/
+  .col-lg-12 form input
+   {
+	margin:0 0 20px;  
+   }
+   .col-lg-12 h3 span
+   {
+	 	margin-left:190px;  
+	}
+	.show
+	{
+		background-color:#f6a2b6;
+	}
+ .col-lg-12 form button
+	{
+	margin:0 1px 10px; 
+	}
   .col-lg-11 {
     width: 91.66666667%;
   }
@@ -959,17 +981,23 @@ Grid Framework
   .col-lg-9 {
     width: 75%;
   }
-  .col-lg-8 {
-    width: 66.66666667%;
+  .col-lg-8 
+  {
+    width: 29.667%;
+	float:right;
   }
-  .col-lg-7 {
+  .col-lg-7 
+  {
     width: 58.33333333%;
+	margin:0 30px;
   }
-  .col-lg-6 {
+  .col-lg-6 
+  {
     width: 50%;
   }
-  .col-lg-5 {
-    width: 41.66666667%;
+  .col-lg-5
+  {
+    width: 32.667%;
   }
   .col-lg-4 {
     width: 33.33333333%;
@@ -978,7 +1006,7 @@ Grid Framework
     width: 25%;
   }
   .col-lg-2 {
-    width: 16.66666667%;
+    width: 34%;
   }
   .col-lg-1 {
     width: 8.33333333%;
@@ -1600,7 +1628,15 @@ Header
   position: static;
 }
 #header #cart {
-  text-align: center;
+  text-align: right;
+}
+#header #cart #cart-product-total
+{
+	text-align:center;
+}
+.scrollup
+{
+	background-color:#f6a2b6!important;
 }
 #header #cart h4 {
   display: none;
@@ -1623,7 +1659,7 @@ Header
   font-size: 14px;
   position: absolute;
   z-index: 1000;
-  left: 48%;
+  left: 93.55%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1710,7 +1746,8 @@ Header
 }
 /*search*/
 #header #search {
-  text-align: center;
+  text-align: right;
+  float:none;
 }
 #header #search .button-search {
   display: none;
@@ -2985,7 +3022,7 @@ Kuler Tabs
 }
 .kuler-tabs .box-heading li {
   display: inline-block;
-  padding-right: 30px;
+  padding-right: 0px;
   vertical-align: top;
   font-size: 18px;
   float: none;
@@ -4323,7 +4360,7 @@ General
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   }
   #header #search input {
-    width: 40%;
+    width: 	100%;
     margin-bottom: 0;
   }
   /*footer*/
@@ -5531,4 +5568,5 @@ Style_4
 	padding: 10px;
     border: 10px solid #f7f8f8;
 }
+
 /*# sourceMappingURL=stylesheet.css.map */
